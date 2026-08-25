@@ -72,7 +72,6 @@
 | 排行榜 | — | ✓ | ✓ |
 | 我喜欢的音乐 | ✓ | ✓ | ✓ |
 | 用户歌单 / 固定到侧边栏 | ✓ | ✓ | ✓ |
-| 官方歌词（含翻译） | 内嵌 / LRC | ✓ | ✓ |
 
 登录方式：
 
@@ -88,7 +87,6 @@
 - 沉浸页：专辑取色、流光活色背景、频谱、黑胶 / 圆角封面
 - 双语滚动歌词：对齐、字号、非当前句缩放 / 透明度 / 模糊
 - 歌词动画：淡入淡出、缩放过渡、发光脉冲、波浪位移
-- 主题：深色 / 浅色 / 跟随系统；可降低透明以减轻性能负担
 
 ## 音质
 
@@ -111,18 +109,10 @@ QQ 音乐目前走 Web 端公开 vkey，常见为 320k / 128k / 96k AAC，同样
 
 本地音乐按原文件播放，不受上述档位限制。
 
-## 快捷键
-
-| 按键 | 作用 |
-|------|------|
-| <kbd>Space</kbd> | 播放 / 暂停（输入框内除外） |
-| <kbd>Ctrl</kbd> + <kbd>F</kbd> | 聚焦搜索 |
-| <kbd>Esc</kbd> | 关闭沉浸页；再按关闭播放队列 |
-| <kbd>Enter</kbd> | 搜索框内执行搜索 |
 
 ## 下载
 
-本仓库 **不包含源码，也不包含安装包**。请到 [Releases](https://github.com/WanFengnie/LingMusic/releases) 下载作者上传的压缩包，解压后运行 `Ling.exe`。
+本仓库 **不包含源码，也不包含安装包**。<br>请到 [Releases](https://github.com/WanFengnie/LingMusic/releases) 下载压缩包，解压后运行 `Ling.exe`。
 
 要求：Windows 10 及以上（x64）。无需自行编译。
 
@@ -146,7 +136,7 @@ QQ 音乐目前走 Web 端公开 vkey，常见为 320k / 128k / 96k AAC，同样
 **高音质没生效？**  
 确认已登录、账号权益足够、音质偏好档位匹配。网易云会按档位向下回退；QQ 音乐受 Web 端 vkey 能力限制。
 
-**扫码一直转圈？**  
+**扫码遇到问题？**  
 二维码会过期，点击刷新。公司网络 / 系统代理可能导致登录接口失败。
 
 **本地歌没有封面或歌词？**  
@@ -157,19 +147,21 @@ QQ 音乐目前走 Web 端公开 vkey，常见为 320k / 128k / 96k AAC，同样
 
 ## 反馈
 
-源码暂不开放。问题与建议请开 [Issue](https://github.com/WanFengnie/LingMusic/issues)。请勿提交破解、解灰或绕过平台鉴权的内容。
+源码暂不开放。<br>问题与建议请开 [Issue](https://github.com/WanFengnie/LingMusic/issues)。请勿提交破解、解灰或绕过平台鉴权的内容。
 
 ## 使用的开源组件
 
-| 组件 | 许可 | 用途 |
-|------|------|------|
-| [NAudio](https://github.com/naudio/NAudio) | MIT | 播放、解码、频谱 |
-| [TagLibSharp](https://github.com/mono/taglib-sharp) | LGPL-2.1 | 本地标签、封面、内嵌歌词 |
+程序本体源码暂不开放。发行包中的独立动态库仍按其原许可证分发，详见 [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)。
 
-交互与协议表述参考了：
+| 组件 | 许可 | 用途 | 发行文件 |
+|------|------|------|----------|
+| [NAudio](https://github.com/naudio/NAudio) 2.2.1 | MIT | 播放、解码、频谱 | `NAudio*.dll` |
+| [TagLibSharp](https://github.com/mono/taglib-sharp) 2.3.0 | LGPL-2.1 | 本地标签、封面、内嵌歌词 | `TagLibSharp.dll` |
 
-- [HyPlayer](https://github.com/HyPlayer/HyPlayer)
-- [LX Music](https://github.com/lyswhut/lx-music-desktop)
+- MIT 全文：[`licenses/MIT-NAudio.txt`](licenses/MIT-NAudio.txt)
+- LGPL-2.1 全文：[`licenses/LGPL-2.1.txt`](licenses/LGPL-2.1.txt)
+- TagLibSharp **未静态链入** `Ling.exe`。可将安装目录中的 `TagLibSharp.dll` 替换为接口兼容的修改版。
+- 本项目未修改 TagLibSharp。对应源码：https://github.com/mono/taglib-sharp/tree/TaglibSharp-2.3.0.0
 
 > 如有许可标注不当，请开 Issue。
 
