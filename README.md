@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="icon.png" width="128" alt="泠音乐 Ling Music"/>
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/icon.png" width="128" alt="泠音乐 Ling Music"/>
 </p>
 
 <h1 align="center">泠音乐</h1>
