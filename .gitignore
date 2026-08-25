@@ -5,3 +5,6 @@
 !.gitignore
 !README.md
 !icon.png
+!THIRD-PARTY-NOTICES.md
+!licenses/
+!licenses/**
