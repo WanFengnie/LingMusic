@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="icon.png" width="128" alt="泠 音乐 Ling Music"/>
+  <img src="icon.png" width="128" alt="泠音乐 Ling Music"/>
 </p>
 
 <h1 align="center">泠音乐</h1>
@@ -126,7 +126,6 @@ QQ 音乐目前走 Web 端公开 vkey，常见为 320k / 128k / 96k AAC，同样
 | 本地曲库索引 | `%APPDATA%\Ling\local_library.json` |
 | 内嵌封面缓存 | `%LOCALAPPDATA%\Ling\covers` |
 
-若存在旧版 `%APPDATA%\Luma\settings.json`，首次启动会自动迁移。
 
 ## 常见问题
 
@@ -163,15 +162,14 @@ QQ 音乐目前走 Web 端公开 vkey，常见为 320k / 128k / 96k AAC，同样
 - TagLibSharp **未静态链入** `Ling.exe`。可将安装目录中的 `TagLibSharp.dll` 替换为接口兼容的修改版。
 - 本项目未修改 TagLibSharp。对应源码：https://github.com/mono/taglib-sharp/tree/TaglibSharp-2.3.0.0
 
-> 如有许可标注不当，请开 Issue。
 
 ## 项目协议
 
-本项目以学习、研究技术可行性为目的发布。以下条款为使用条件；与常见开源许可证冲突时，**以本协议为准**。
+本项目以学习、研究技术可行性为目的发布。以下条款约束泠音乐程序本体的使用。随包分发的第三方库（NAudio、TagLibSharp 等）仍按各自原许可证执行，本协议不能覆盖那些许可证。
 
 ---
 
-*词语约定：本协议中的「本项目」指泠 音乐（Ling Music）；「使用者」指使用本项目的个人；「官方音乐平台」指网易云音乐、QQ 音乐等；「版权数据」指包括但不限于音频、歌词、图像、歌单名、艺人名等他人拥有版权的数据。*
+*词语约定：本协议中的「本项目」指泠音乐（Ling Music）；「使用者」指使用本项目的个人；「官方音乐平台」指网易云音乐、QQ 音乐等；「版权数据」指包括但不限于音频、歌词、图像、歌单名、艺人名等他人拥有版权的数据。*
 
 ### 一、数据来源
 
