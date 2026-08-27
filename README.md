@@ -23,6 +23,17 @@
 
 
 
+## 界面预览
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/screenshot-home.png" width="49%" alt="资料库首页">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/screenshot-local.png" width="49%" alt="本地曲库">
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/screenshot-player-blue.png" width="49%" alt="播放页 · 扁平主题">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/screenshot-player-red.png" width="49%" alt="播放页 · 黑胶封面">
+</p>
+
 ## 下载
 
 本仓库 **不包含源码，也不包含安装包**。<br>请到 [Releases](https://github.com/WanFengnie/LingMusic/releases) 下载压缩包，解压后运行 `Ling.exe`。
