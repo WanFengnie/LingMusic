@@ -4,7 +4,7 @@
 
 <h1 align="center">泠音乐</h1>
 <h4 align="center">Ling Music</h4>
-<p align="center">轻量原生的 Windows 音乐播放器</p>
+<p align="center">原生美观的 Windows 音乐播放器</p>
 
 <p align="center">
   <img alt=".NET 10" src="https://img.shields.io/badge/.NET-10-512BD4?logo=dotnet&logoColor=white">
@@ -15,10 +15,10 @@
 </p>
 
 <p align="center">
-  本软件主体为 <b>本地音乐播放器</b>。<br>
-  网易云音乐与 QQ 音乐接口仅供学习研究。<br>
-  如构成侵权，将立即删除相关内容与能力。<br>
-  请尊重版权，支持正版。
+  本软件主体为 <b>本地音乐播放器</b><br>
+  网易云音乐与 QQ 音乐接口仅供学习研究且不能保证时刻可用<br>
+  如构成侵权，将立即删除相关内容与能力<br>
+  请尊重版权，支持正版
 </p>
 
 
@@ -64,6 +64,7 @@
 - 支持将常用歌单固定至主界面侧边导航栏
 
 ### 3. 播放与音频控制
+- 支持断点平滑续播
 - 支持顺序播放、单曲循环、随机播放
 - 支持外设按键控制
 
