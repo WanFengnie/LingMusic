@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>泠音乐 Ling Music — 轻量原生的 Windows 音乐播放器</title>
+<meta name="description" content="泠音乐（Ling Music）是一款轻量原生的 Windows 音乐播放器。支持本地曲库，具备自适应封面取色、动态流光背景、双语歌词动效。免费下载，支持 Windows 10 及以上。">
+<meta name="keywords" content="泠音乐,Ling Music,Windows音乐播放器,本地音乐播放器,音乐,歌词,FLAC播放器,音乐播放器下载">
+<meta name="author" content="WanFengnie">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://wanfengnie.github.io/LingMusic/">
+<link rel="icon" href="https://github.com/user-attachments/assets/0051f112-645f-47c7-9947-252959083bc1">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="泠音乐 Ling Music">
+<meta property="og:title" content="泠音乐 Ling Music — 轻量原生的 Windows 音乐播放器">
+<meta property="og:description" content="自适应封面取色与动态流光歌词。Windows 10+ 免费下载。">
+<meta property="og:image" content="https://github.com/user-attachments/assets/0051f112-645f-47c7-9947-252959083bc1">
+<meta property="og:url" content="https://wanfengnie.github.io/LingMusic/">
+<meta property="og:locale" content="zh_CN">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="泠音乐 Ling Music — 轻量原生的 Windows 音乐播放器">
+<meta name="twitter:description" content="自适应封面取色与动态流光歌词。">
+<meta name="twitter:image" content="https://github.com/user-attachments/assets/0051f112-645f-47c7-9947-252959083bc1">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "泠音乐 Ling Music",
+  "alternateName": "Ling Music",
+  "operatingSystem": "Windows 10, Windows 11",
+  "applicationCategory": "MultimediaApplication",
+  "applicationSubCategory": "Music Player",
+  "inLanguage": "zh-CN",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
+  "description": "轻量原生的 Windows 音乐播放器。本地曲库管理,自适应封面取色、动态流光背景、双语歌词动效。",
+  "url": "https://wanfengnie.github.io/LingMusic/",
+  "downloadUrl": "https://github.com/WanFengnie/LingMusic/releases",
+  "author": { "@type": "Person", "name": "WanFengnie", "url": "https://github.com/WanFengnie" }
+}
+</script>
+
+<style>
+:root{
+  --bg:#0e0e10;
+  --card:rgba(255,255,255,.04);
+  --card-border:rgba(255,255,255,.08);
+  --text:#ececef;
+  --text-dim:#9a9aa2;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:"Microsoft YaHei","PingFang SC","Segoe UI",system-ui,sans-serif;
+  min-height:100vh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;
+  padding:40px 20px;line-height:1.7;
+  background-image:
+    radial-gradient(1000px 600px at 80% -10%, rgba(255,255,255,.045), transparent 60%),
+    radial-gradient(800px 550px at 10% 30%, rgba(255,255,255,.03), transparent 60%);
+}
+::selection{background:rgba(255,255,255,.25)}
+
+.logo{
+  width:112px;height:112px;border-radius:28px;
+  box-shadow:0 16px 56px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.12);
+  animation:float 5s ease-in-out infinite;
+}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+
+h1{
+  margin-top:30px;font-size:clamp(46px,8vw,76px);font-weight:800;letter-spacing:3px;color:#fff;
+}
+.en{color:var(--text-dim);font-size:clamp(13px,2vw,17px);letter-spacing:8px;margin-top:4px;text-transform:uppercase}
+.slogan{margin-top:24px;font-size:clamp(16px,2.4vw,21px)}
+.sub{color:var(--text-dim);font-size:14px;margin-top:8px}
+
+.badges{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:26px}
+.badge{
+  font-size:12.5px;padding:5px 13px;border-radius:999px;
+  background:var(--card);border:1px solid var(--card-border);color:var(--text-dim);
+}
+.badge b{color:#fff;font-weight:600}
+
+.cta{display:flex;gap:14px;margin-top:38px;flex-wrap:wrap;justify-content:center}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 26px;border-radius:12px;text-decoration:none;
+  font-size:15px;font-weight:600;transition:.25s;border:1px solid transparent;
+}
+.btn-primary{color:#0e0e10;background:#fff;box-shadow:0 4px 24px rgba(255,255,255,.12)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(255,255,255,.22)}
+.btn-ghost{color:var(--text);border-color:var(--card-border);background:var(--card)}
+.btn-ghost:hover{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.08)}
+
+footer{
+  margin-top:72px;color:var(--text-dim);font-size:12.5px;line-height:2;max-width:640px;
+}
+footer a{color:var(--text-dim);text-decoration:none;border-bottom:1px dashed rgba(255,255,255,.25)}
+footer a:hover{color:#fff}
+footer .disc{opacity:.7;margin-top:8px}
+</style>
+</head>
+<body>
+
+<img class="logo" src="https://github.com/user-attachments/assets/0051f112-645f-47c7-9947-252959083bc1" alt="泠音乐 Ling Music 图标">
+<h1>泠音乐</h1>
+<div class="en">Ling Music</div>
+<p class="slogan">轻量原生的 Windows 音乐播放器</p>
+
+<div class="badges">
+  <span class="badge">平台 <b>Windows 10+</b></span>
+  <span class="badge">免费</span>
+</div>
+
+<div class="cta">
+  <a class="btn btn-primary" href="https://github.com/WanFengnie/LingMusic/releases" rel="noopener">⬇ 前往 Releases 下载</a>
+  <a class="btn btn-ghost" href="https://github.com/WanFengnie/LingMusic" rel="noopener">GitHub 仓库</a>
+</div>
+
+<footer>
+  <div>
+    <a href="https://github.com/WanFengnie/LingMusic" rel="noopener">GitHub</a> ·
+    <a href="https://github.com/WanFengnie/LingMusic/releases" rel="noopener">Releases</a> ·
+    <a href="https://github.com/WanFengnie/LingMusic/blob/main/THIRD-PARTY-NOTICES.md" rel="noopener">第三方声明</a>
+  </div>
+  <div class="disc">
+    泠音乐主体为本地音乐播放器 在线内容版权归相应平台及版权方所有 请尊重版权 支持正版
+  </div>
+  <div style="margin-top:10px">© 2026 WanFengnie · 泠音乐 Ling Music</div>
+</footer>
+
+</body>
+</html>
