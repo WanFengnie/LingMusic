@@ -366,14 +366,11 @@
 
 
 | 内容 | 位置 |
-
-|------|------|
-
+| :--- | :--- |
 | 设置、登录态、歌单、播放记忆 | `%APPDATA%\Ling\settings.json` |
-
 | 本地曲库索引 | `%APPDATA%\Ling\local_library.json` |
-
 | 内嵌封面缓存 | `%LOCALAPPDATA%\Ling\covers` |
+
 
 
 
@@ -430,11 +427,8 @@
 
 
 | 组件 | 许可 | 用途 | 发行文件 |
-
-|------|------|------|----------|
-
+| :--- | :--- | :--- | :--- |
 | [NAudio](https://github.com/naudio/NAudio) 2.2.1 | MIT | 播放、解码、频谱 | `NAudio*.dll` |
-
 | [TagLibSharp](https://github.com/mono/taglib-sharp) 2.3.0 | LGPL-2.1 | 本地标签、封面、内嵌歌词 | `TagLibSharp.dll` |
 
 
