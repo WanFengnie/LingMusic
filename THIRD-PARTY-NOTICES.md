@@ -20,6 +20,7 @@
 - 项目：https://github.com/filoe/cscore
 - 许可证：**Microsoft Public License (MS-PL)**
 - 用途：Windows 桌面端高质量音频解码、流媒体与实时频域分析
+- 全文：[licenses/MS-PL.txt](licenses/MS-PL.txt)
 - Copyright © 2013-2017 Florian R.
 
 ---
