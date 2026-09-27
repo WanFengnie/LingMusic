@@ -1,4 +1,6 @@
-# 第三方开源组件声明 (v0.5.0 new)
+# 第三方开源组件声明
+
+> 版本号唯一来源：仓库根 `LingVersion.props`（此处不再写死，避免与产物漂移）。
 
 泠音乐（Ling Music）发行包中随附的下列独立开源组件按其原许可证分发。
 
@@ -6,7 +8,7 @@
 
 ---
 
-## 1. Avalonia UI 11.2
+## 1. Avalonia UI 12.1.2
 
 - 项目：https://github.com/AvaloniaUI/Avalonia
 - 许可证：**MIT**
@@ -15,13 +17,12 @@
 
 ---
 
-## 2. CSCore 1.2.1
+## 2. NAudio 2.2.1
 
-- 项目：https://github.com/filoe/cscore
-- 许可证：**Microsoft Public License (MS-PL)**
+- 项目：https://github.com/naudio/NAudio
+- 许可证：**MIT**
 - 用途：Windows 桌面端高质量音频解码、流媒体与实时频域分析
-- 全文：[licenses/MS-PL.txt](licenses/MS-PL.txt)
-- Copyright © 2013-2017 Florian R.
+- Copyright © Mark Heath
 
 ---
 
@@ -50,6 +51,26 @@ NuGet：https://www.nuget.org/packages/TagLibSharp/2.3.0
 6. **未修改**：若未来修改了 TagLibSharp 本身，修改部分将按 LGPL-2.1 公开。当前发行未修改该库。
 
 “泠音乐”代码不是 TagLib# 的衍生作品，不因使用该库而改为 LGPL 或 GPL。
+
+---
+
+## 4. 其他随包分发的 MIT 组件
+
+以下组件由 Avalonia 与 .NET 运行时间接引入，随发行包一同分发，均为 **MIT**：
+
+- **SkiaSharp / HarfBuzzSharp** —— 2D 图形光栅化与文字排版引擎（.NET Foundation 及 Contributors），https://github.com/mono/SkiaSharp
+- **Tmds.DBus.Protocol** —— D-Bus 协议实现（Tom Deseyn），https://github.com/tmds/Tmds.DBus
+- **MicroCom.Runtime** —— COM 互操作运行时（Avalonia 项目），https://github.com/AvaloniaUI/Avalonia
+- **.NET 运行时与 CsWinRT 投影**（Microsoft）—— 自包含发行包内含 `System.*`、`coreclr`、`hostfxr` 等 .NET 运行时文件，以及 `WinRT.Runtime`、`Microsoft.Windows.SDK.NET`
+
+## 5. Android 发行包另含
+
+Android 版除上述组件外，还在 APK 内捆绑下列库（各个构件以其包内附带的许可文本为准）：
+
+- **AndroidX**（Android Open Source Project）—— **Apache License 2.0**，全文见 https://www.apache.org/licenses/LICENSE-2.0
+  - 直接引用：`androidx.core`、`androidx.core.core.ktx`、`androidx.appcompat`、`androidx.media`、`androidx.window`、`androidx.window.windowjava`
+  - 传递依赖：`androidx.lifecycle.*`、`androidx.fragment`、`androidx.activity` 等
+- **.NET for Android 运行时**（Microsoft）—— **MIT**
 
 ---
 
