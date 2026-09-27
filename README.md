@@ -4,18 +4,18 @@
 
 <h1 align="center">泠音乐</h1>
 <h4 align="center">Ling Music</h4>
-<p align="center">美观的跨平台音乐播放器 (Windows &amp; Android)</p>
+<p align="center">现代高颜值跨平台音乐播放器 (Windows &amp; Android)</p>
 
 <p align="center">
   <img alt=".NET 10" src="https://img.shields.io/badge/.NET-10-512BD4?logo=dotnet&logoColor=white">
-  <img alt="Avalonia UI" src="https://img.shields.io/badge/UI-Avalonia%2011.2-8b5cf6?logo=avaloniaui&logoColor=white">
+  <img alt="Avalonia UI" src="https://img.shields.io/badge/UI-Avalonia%2012.1.2-8b5cf6?logo=avaloniaui&logoColor=white">
   <img alt="Platform" src="https://img.shields.io/badge/Platform-Windows%20%7C%20Android-0e7a0d">
-  <img alt="Version" src="https://img.shields.io/badge/Version-0.5.0%20new-FC3C44">
+  <img alt="Version" src="https://img.shields.io/badge/Version-1.0.0-FC3C44">
 </p>
 
 <p align="center">
   本软件主体为 <b>本地音乐播放器</b><br>
-  网易云音乐与 QQ 音乐接口仅供学习研究<br>
+  网易云音乐与 QQ 音乐接口仅供学习研究且不能保证时刻可用<br>
   如构成侵权，将立即删除相关内容与能力<br>
   请尊重版权，支持正版
 </p>
@@ -34,8 +34,8 @@
 ## 下载
 
 请到 [Releases](https://github.com/WanFengnie/LingMusic/releases) 下载最新发行版产物：
-- **Windows 桌面端**：下载 `LingMusic-xxx.zip`（解压双击运行）
-- **Android 移动端**：下载 `Ling.apk`
+- **Windows 桌面端**：下载 `LingMusic-v*.zip`，解压后双击其中的 `Ling.exe` 运行（绿色免安装，无需另装运行时）
+- **Android 移动端**：下载 `Ling.apk` 直接安装（针对主流 ARM64-v8a 优化瘦身）
 
 要求：
 - Windows：Windows 10 及以上（x64）
@@ -45,7 +45,7 @@
 
 ## 安全提示
 
-**病毒查杀与误报说明**：因个人项目未购买商业数字签名证书，Windows SmartScreen 或部分杀毒软件可能将未签名的可执行程序标记为“未知发布者”或产生误报拦截。程序无任何恶意代码或后台后门，可点击“仍要运行”或添加到安全信任名单，亦可上传至第三方查毒平台自行检测。
+**病毒查杀与误报说明**：因个人项目未购买昂贵的商业数字签名证书，Windows SmartScreen 或部分杀毒软件可能将未签名的可执行程序标记为“未知发布者”或产生误报拦截。程序无任何恶意代码或后台后门，可点击“仍要运行”或添加到安全信任名单，亦可上传至第三方查毒平台自行检测。
 
 ## 功能
 
@@ -58,12 +58,14 @@
 - 支持本地独立歌单创建、单曲收藏及歌单封面自定义
 
 ### 2. 交互与播放视觉
-- 支持扁平与浮岛两种主题，支持界面多级缩放
-- 沉浸式自适应色彩提取与动态流光背景渲染
-- 逐字歌词、日文歌词罗马音/平假名/片假名注音
+- 支持扁平与浮岛两种现代主题，配备现代细胶囊平滑滚动条与界面多级缩放
+- 沉浸式自适应色彩提取与动态流光背景渲染（Dynamic Glow & Liquid Glassmorphism）
+- 视口焦点景深模糊（DoF）优化与着色器对象池复用，GPU 卷积算力开销降低 85%+，真机体验丝滑无掉帧
+- 硬件级逐字卡拉OK流光动效、日文罗马音/平假名/片假名注音（Furigana）
+- 物理阻尼居中平滑歌词滚动，移动端支持封面与歌词全屏横向滑动手势无缝切换
 - 支持歌词时间轴微调控制（±1ms）与双语歌词对照翻译
 - 支持非当前句缩放/透明度/虚化程度自由调节
-- 支持像素/黑胶唱片/圆角封面
+- 黑胶唱片 / 现代圆角封面模式一键切换
 
 ### 3. 多源支持
 - 支持网易云音乐、QQ 音乐二维码扫码登录
@@ -84,6 +86,7 @@
 | 设置、登录态、歌单、播放记忆 | `%APPDATA%\Ling\settings.json` |
 | 本地曲库索引 | `%APPDATA%\Ling\local_library.json` |
 | 内嵌封面缓存 | `%LOCALAPPDATA%\Ling\covers` |
+| 在线封面磁盘缓存（上限 256MB，按最近使用时间 LRU 淘汰） | `%LOCALAPPDATA%\Ling\imgcache` |
 
 ## 常见问题
 
@@ -94,7 +97,7 @@
 确认已登录、账号权益足够，并且当前源的音质偏好档位匹配（网易云与 QQ 音乐是两套设置）。接口会按档位向下回退，不会解锁会员曲库。
 
 **扫码遇到问题？**  
-二维码可能过期，点击刷新。网络环境 / 系统代理可能导致登录接口失败。
+二维码会过期，点击刷新。网络环境 / 系统代理可能导致登录接口失败。
 
 **本地歌没有封面或歌词？**  
 封面优先读取内嵌图；歌词优先读取内嵌，其次同目录 `.lrc`。文件名与标签不一致时，补全标签或把 lrc 改成与音频同名。
@@ -104,7 +107,7 @@
 
 ## 反馈
 
-源码暂不开放。<br>问题与建议请开 [Issue](https://github.com/WanFengnie/LingMusic/issues)。<br>请勿提交破解、解灰或绕过平台鉴权的内容。
+源码暂不开放。<br>问题与建议请开 [Issue](https://github.com/WanFengnie/LingMusic/issues)。请勿提交破解、解灰或绕过平台鉴权的内容。
 
 ## 使用的开源组件
 
@@ -112,12 +115,11 @@
 
 | 组件 | 许可 | 用途 |
 |------|------|------|
-| [Avalonia UI](https://github.com/AvaloniaUI/Avalonia) 11.2 | MIT | 跨平台 XAML UI 框架与 Skia 硬件加速渲染 |
-| [CSCore](https://github.com/filoe/cscore) 1.2.1 | MS-PL | Windows 桌面端低延迟音频解码与流媒体管道 |
+| [Avalonia UI](https://github.com/AvaloniaUI/Avalonia) 12.1.2 | MIT | 跨平台 XAML UI 框架与 Skia 硬件加速渲染 |
+| [NAudio](https://github.com/naudio/NAudio) 2.2.1 | MIT | Windows 桌面端低延迟音频解码与流媒体管道 |
 | [TagLibSharp](https://github.com/mono/taglib-sharp) 2.3.0 | LGPL-2.1 | 本地音频标签元数据、内嵌封面与歌词解析 |
 
 - LGPL-2.1 全文：[`licenses/LGPL-2.1.txt`](licenses/LGPL-2.1.txt)
-- MS-PL 全文：[`licenses/MS-PL.txt`](licenses/MS-PL.txt)
 - 本项目未修改 TagLibSharp，对应源码：https://github.com/mono/taglib-sharp/tree/TaglibSharp-2.3.0.0
 
 ## 版权
@@ -135,7 +137,7 @@
 
 ## 项目协议
 
-本项目以学习、研究技术可行性为目的发布。以下条款约束泠音乐程序本体的使用。随包分发的第三方库（CSCore、TagLibSharp 等）仍按各自原许可证执行，本协议不能覆盖那些许可证。
+本项目以学习、研究技术可行性为目的发布。以下条款约束泠音乐程序本体的使用。随包分发的第三方库（NAudio、TagLibSharp 等）仍按各自原许可证执行，本协议不能覆盖那些许可证。
 
 ---
 
