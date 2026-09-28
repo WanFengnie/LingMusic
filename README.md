@@ -22,13 +22,37 @@
 
 ## 界面预览
 
+### Windows 桌面端
+
 <p align="center">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/screenshot-home.png" width="49%" alt="资料库首页">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/screenshot-local.png" width="49%" alt="本地曲库">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-home.png" width="49%" alt="资料库首页 · 现在听">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-playlist.png" width="49%" alt="歌单详情">
 </p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/screenshot-player-blue.png" width="49%" alt="播放页 · 扁平主题">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/screenshot-player-red.png" width="49%" alt="播放页 · 黑胶封面">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-player.png" width="49%" alt="播放页 · 圆角封面">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-player-pixel.png" width="49%" alt="播放页 · 像素封面">
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-player-vinyl.png" width="49%" alt="播放页 · 黑胶封面">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-playlist-heart.png" width="49%" alt="歌单 · 红心收藏">
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-mini.png" width="31%" alt="迷你播放条">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-lyric.png" width="62%" alt="桌面歌词">
+</p>
+
+### Android 移动端
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-android-home.png" width="24%" alt="首页推荐">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-android-player.png" width="24%" alt="播放页">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-android-lyric.png" width="24%" alt="歌词页">
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-android-landscape.png" width="66%" alt="横屏播放">
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-android-landscape-queue.png" width="49%" alt="横屏 · 封面队列">
 </p>
 
 ## 下载
