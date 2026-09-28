@@ -4,7 +4,7 @@
 
 泠音乐（Ling Music）发行包中随附的下列独立开源组件按其原许可证分发。
 
-本声明随安装包提供。完整许可文本见 licenses/ 目录。
+本声明随安装包提供。完整许可文本见 licenses/ 目录（含 SkiaSharp / HarfBuzzSharp native 包自带的第三方声明原文）。各组件版权行以随包 `.nuspec` 的 `<copyright>` 为准。
 
 ---
 
@@ -13,7 +13,7 @@
 - 项目：https://github.com/AvaloniaUI/Avalonia
 - 许可证：**MIT**
 - 用途：跨平台 XAML UI 框架与 Skia 硬件加速渲染
-- Copyright © .NET Foundation and Contributors
+- Copyright 2013-2026 © The AvaloniaUI Project
 
 ---
 
@@ -34,7 +34,7 @@
 - 发行文件：TagLibSharp.dll（独立动态库）
 - 全文：[licenses/LGPL-2.1.txt](licenses/LGPL-2.1.txt)
 
-Copyright © The TagLib# Contributors.
+Copyright © 2006-2007 Brian Nickel；2009-2020 Other contributors.
 
 对应上游版本：https://github.com/mono/taglib-sharp/tree/TaglibSharp-2.3.0.0  
 NuGet：https://www.nuget.org/packages/TagLibSharp/2.3.0
@@ -54,13 +54,18 @@ NuGet：https://www.nuget.org/packages/TagLibSharp/2.3.0
 
 ---
 
-## 4. 其他随包分发的 MIT 组件
+## 4. 其他随包分发的组件
 
-以下组件由 Avalonia 与 .NET 运行时间接引入，随发行包一同分发，均为 **MIT**：
+以下组件由 Avalonia 与 .NET 运行时间接引入，随发行包一同分发（除注明者外均为 **MIT**）：
 
-- **SkiaSharp / HarfBuzzSharp** —— 2D 图形光栅化与文字排版引擎（.NET Foundation 及 Contributors），https://github.com/mono/SkiaSharp
+- **SkiaSharp 3.119.4 / HarfBuzzSharp 8.3.1.3** —— 2D 图形光栅化与文字排版引擎（`libSkiaSharp.dll` / `libHarfBuzzSharp.dll`，Android 侧为同名 `.so`），https://github.com/mono/SkiaSharp
+  - 许可证：**MIT** —— Copyright © 2015-2016 Xamarin, Inc.；2017-2018 Microsoft Corporation
+  - 这两个库内另外静态链接了 23 项第三方代码（ANGLE、HarfBuzz、skia、etc1、gif、libpng、DNG SDK、expat、freetype、ICU、imgui、jsoncpp、libjpeg-turbo、libwebp、libmicrohttpd、piex、sdl、sfntly、SPIR-V Headers、SPIR-V Tools、zlib），其版权声明与许可原文见
+    [licenses/SkiaSharp-HarfBuzzSharp-THIRD-PARTY-NOTICES.txt](licenses/SkiaSharp-HarfBuzzSharp-THIRD-PARTY-NOTICES.txt)
+    —— 2,716 行 / 139,775 B，由 `SkiaSharp.NativeAssets.*` 与 `HarfBuzzSharp.NativeAssets.*` 包原样附带，四个 native 包内该文件字节完全相同
+- **ANGLE**（`av_libglesv2.dll`，随 `Avalonia.Angle.Windows.Natives 2.1.27548.20260419` 分发）—— 把 OpenGL ES 调用转译为 Direct3D 的图形后端，**BSD-3-Clause** —— Copyright 2018 The ANGLE Project Authors，全文 [licenses/ANGLE-BSD-3.txt](licenses/ANGLE-BSD-3.txt)
 - **Tmds.DBus.Protocol** —— D-Bus 协议实现（Tom Deseyn），https://github.com/tmds/Tmds.DBus
-- **MicroCom.Runtime** —— COM 互操作运行时（Avalonia 项目），https://github.com/AvaloniaUI/Avalonia
+- **MicroCom.Runtime** —— COM 互操作运行时（Copyright © 2021 Nikita Tsukanov），https://github.com/AvaloniaUI/Avalonia
 - **.NET 运行时与 CsWinRT 投影**（Microsoft）—— 自包含发行包内含 `System.*`、`coreclr`、`hostfxr` 等 .NET 运行时文件，以及 `WinRT.Runtime`、`Microsoft.Windows.SDK.NET`
 
 ## 5. Android 发行包另含
@@ -71,6 +76,7 @@ Android 版除上述组件外，还在 APK 内捆绑下列库（各个构件以�
   - 直接引用：`androidx.core`、`androidx.core.core.ktx`、`androidx.appcompat`、`androidx.media`、`androidx.window`、`androidx.window.windowjava`
   - 传递依赖：`androidx.lifecycle.*`、`androidx.fragment`、`androidx.activity` 等
 - **.NET for Android 运行时**（Microsoft）—— **MIT**
+- **SkiaSharp / HarfBuzzSharp native 库**（`libSkiaSharp.so`、`libHarfBuzzSharp.so`）—— 与 Windows 侧同一份第三方声明：[licenses/SkiaSharp-HarfBuzzSharp-THIRD-PARTY-NOTICES.txt](licenses/SkiaSharp-HarfBuzzSharp-THIRD-PARTY-NOTICES.txt)
 
 ---
 
