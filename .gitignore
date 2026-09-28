@@ -1,0 +1,13 @@
+# 全局屏蔽所有文件，严禁上传源码
+*
+
+# 仅放行静态网站网页与必要文件
+!.gitignore
+!index.html
+!*.html
+!*.css
+!*.js
+!*.txt
+!*.svg
+!*.png
+!*.ico
