@@ -4,7 +4,7 @@
 
 <h1 align="center">泠音乐</h1>
 <h4 align="center">Ling Music</h4>
-<p align="center">现代高颜值跨平台音乐播放器 (Windows &amp; Android)</p>
+<p align="center">现代跨平台音乐播放器 (Windows &amp; Android)</p>
 
 <p align="center">
   <img alt=".NET 10" src="https://img.shields.io/badge/.NET-10-512BD4?logo=dotnet&logoColor=white">
@@ -15,7 +15,7 @@
 
 <p align="center">
   本软件主体为 <b>本地音乐播放器</b><br>
-  网易云音乐与 QQ 音乐接口仅供学习研究且不能保证时刻可用<br>
+  网易云音乐与 QQ 音乐接口仅供学习研究<br>
   如构成侵权，将立即删除相关内容与能力<br>
   请尊重版权，支持正版
 </p>
@@ -26,7 +26,7 @@
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-playlist.png" width="49%" alt="歌单详情">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-home.png" width="49%" alt="资料库首页 · 现在听">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-playlist-heart.png" width="49%" alt="首页">
 </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-player.png" width="49%" alt="播放页 · 圆角封面">
@@ -34,11 +34,11 @@
 </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-player-vinyl.png" width="49%" alt="播放页 · 黑胶封面">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-playlist-heart.png" width="49%" alt="歌单 · 红心收藏">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-home.png" width="49%" alt="首页">
 </p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-mini.png" width="31%" alt="迷你播放条">
   <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-lyric.png" width="62%" alt="桌面歌词">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-mini.png" width="31%" alt="迷你播放">
 </p>
 
 ### Android 移动端
@@ -50,9 +50,6 @@
 </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-android-landscape.png" width="66%" alt="横屏播放">
-</p>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-android-landscape-queue.png" width="49%" alt="横屏 · 封面队列">
 </p>
 
 ## 下载
@@ -69,7 +66,7 @@
 
 ## 安全提示
 
-**病毒查杀与误报说明**：因个人项目未购买昂贵的商业数字签名证书，Windows SmartScreen 或部分杀毒软件可能将未签名的可执行程序标记为“未知发布者”或产生误报拦截。程序无任何恶意代码或后台后门，可点击“仍要运行”或添加到安全信任名单，亦可上传至第三方查毒平台自行检测。
+**病毒查杀与误报说明**：因个人项目未购买商业数字签名证书，Windows SmartScreen 或部分杀毒软件可能将未签名的可执行程序标记为“未知发布者”或产生误报拦截。程序无任何恶意代码或后台后门，可点击“仍要运行”或添加到安全信任名单，亦可上传至第三方查毒平台自行检测。
 
 ## 功能
 
@@ -79,17 +76,15 @@
 - 可解析音频标题、艺人、专辑、时长、内嵌封面与内嵌歌词
 - 支持本地音频标签元数据手动编辑并同时写回物理文件
 - 支持内嵌歌词与同目录 `.lrc` 文件解析
-- 支持本地独立歌单创建、单曲收藏及歌单封面自定义
+- 支持本地独立歌单创建、单曲收藏
 
-### 2. 交互与播放视觉
+### 2. 播放视觉
 - 支持扁平与浮岛两种现代主题，配备现代细胶囊平滑滚动条与界面多级缩放
-- 沉浸式自适应色彩提取与动态流光背景渲染（Dynamic Glow & Liquid Glassmorphism）
-- 视口焦点景深模糊（DoF）优化与着色器对象池复用，GPU 卷积算力开销降低 85%+，真机体验丝滑无掉帧
-- 硬件级逐字卡拉OK流光动效、日文罗马音/平假名/片假名注音（Furigana）
-- 物理阻尼居中平滑歌词滚动，移动端支持封面与歌词全屏横向滑动手势无缝切换
+- 沉浸式自适应色彩提取与动态流光背景渲染
+- 逐字歌词动效、日文歌词罗马音/平假名/片假名注音
 - 支持歌词时间轴微调控制（±1ms）与双语歌词对照翻译
 - 支持非当前句缩放/透明度/虚化程度自由调节
-- 黑胶唱片 / 现代圆角封面模式一键切换
+- 黑胶唱片 / 现代圆角 / 像素封面模式切换
 
 ### 3. 多源支持
 - 支持网易云音乐、QQ 音乐二维码扫码登录
@@ -110,9 +105,9 @@
 | 设置、登录态、歌单、播放记忆 | `%APPDATA%\Ling\settings.json` |
 | 本地曲库索引 | `%APPDATA%\Ling\local_library.json` |
 | 内嵌封面缓存 | `%LOCALAPPDATA%\Ling\covers` |
-| 在线封面磁盘缓存（上限 256MB，按最近使用时间 LRU 淘汰） | `%LOCALAPPDATA%\Ling\imgcache` |
+| 在线封面磁盘缓存 | `%LOCALAPPDATA%\Ling\imgcache` |
 
-## 常见问题
+## 问题
 
 **为什么有的歌提示没有可播放的音源？**  
 未登录、无相应会员、或平台侧无版权时，接口不会返回播放地址。请登录对应账号，或改听本地文件。本项目不会绕过这一限制。若接口只返回试听片段，状态栏会提示「试听中」，完整播放需对应平台会员。
@@ -121,17 +116,17 @@
 确认已登录、账号权益足够，并且当前源的音质偏好档位匹配（网易云与 QQ 音乐是两套设置）。接口会按档位向下回退，不会解锁会员曲库。
 
 **扫码遇到问题？**  
-二维码会过期，点击刷新。网络环境 / 系统代理可能导致登录接口失败。
+二维码可能过期，网络环境 / 系统代理可能导致登录接口失败。
 
 **本地歌没有封面或歌词？**  
-封面优先读取内嵌图；歌词优先读取内嵌，其次同目录 `.lrc`。文件名与标签不一致时，补全标签或把 lrc 改成与音频同名。
+封面优先读取内嵌图；歌词优先读取内嵌，其次同目录 `.lrc`。
 
 **会扫描整个磁盘吗？**  
 不会。只扫描明确添加或拖入的文件夹；单独拖入文件不会扫描其所在目录。
 
 ## 反馈
 
-源码暂不开放。<br>问题与建议请开 [Issue](https://github.com/WanFengnie/LingMusic/issues)。请勿提交破解、解灰或绕过平台鉴权的内容。
+问题与建议请开 [Issue](https://github.com/WanFengnie/LingMusic/issues)。请勿提交破解、解灰或绕过平台鉴权的内容。
 
 ## 使用的开源组件
 
