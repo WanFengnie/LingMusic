@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <filter id="tileDropS" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="22" flood-color="#000000" flood-opacity="0.55" />
+    </filter>
+
+    <linearGradient id="weakBaseGradS" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141519" />
+      <stop offset="100%" stop-color="#08090C" />
+    </linearGradient>
+
+    <linearGradient id="vinylGradS" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#222530" />
+      <stop offset="100%" stop-color="#101217" />
+    </linearGradient>
+
+    <linearGradient id="recessDiscShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.30" />
+      <stop offset="35%" stop-color="#000000" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="recessDiscLip" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="75%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.11" />
+    </linearGradient>
+  </defs>
+
+  <rect x="36" y="36" width="440" height="440" rx="98" ry="98" fill="url(#weakBaseGradS)" filter="url(#tileDropS)" />
+  <rect x="36" y="36" width="440" height="440" rx="98" ry="98" fill="none" stroke="white" stroke-width="1.2" stroke-opacity="0.08" />
+
+  <circle cx="256" cy="256" r="153.5" fill="none" stroke="url(#recessDiscLip)" stroke-width="1.2" />
+
+  <circle cx="256" cy="256" r="152" fill="url(#vinylGradS)" />
+  <circle cx="256" cy="256" r="152" fill="none" stroke="#3D4554" stroke-width="2" />
+
+  <circle cx="256" cy="256" r="152" fill="url(#recessDiscShadow)" />
+
+  <circle cx="256" cy="256" r="138" fill="none" stroke="white" stroke-width="1.5" stroke-opacity="0.18" />
+  <circle cx="256" cy="256" r="126" fill="none" stroke="white" stroke-width="1.0" stroke-opacity="0.07" />
+  <circle cx="256" cy="256" r="114" fill="none" stroke="white" stroke-width="1.5" stroke-opacity="0.15" />
+  <circle cx="256" cy="256" r="102" fill="none" stroke="white" stroke-width="1.0" stroke-opacity="0.07" />
+  <circle cx="256" cy="256" r="90" fill="none" stroke="white" stroke-width="1.5" stroke-opacity="0.15" />
+
+  <circle cx="256" cy="256" r="42" fill="#DE3831" />
+  <circle cx="256" cy="256" r="34" fill="none" stroke="white" stroke-width="0.75" stroke-opacity="0.25" />
+
+  <circle cx="256" cy="256" r="11" fill="#101217" />
+</svg>
