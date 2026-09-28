@@ -93,7 +93,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 下列组件同样随包分发，但**不是** MIT 许可，其全文或说明见括号内指向：
 
 - **TagLibSharp 2.3.0** —— GNU LGPL-2.1（全文见 licenses/LGPL-2.1.txt；§6 义务说明见 THIRD-PARTY-NOTICES.md 第 3 节）
-- **ANGLE**（Avalonia.Angle.Windows.Natives 内的 av_libglesv2.dll，BSD 三条款风格许可，版权行 "Copyright 2018 The ANGLE Project Authors"）—— 其许可全文当前**尚未附入本目录**，待补 licenses/ANGLE-BSD-3-Clause.txt
+- **ANGLE**（Avalonia.Angle.Windows.Natives 内的 av_libglesv2.dll，BSD 三条款风格许可，版权行 "Copyright 2018 The ANGLE Project Authors"）—— 许可全文见 licenses/ANGLE-BSD-3.txt
 - **AndroidX 系列**（仅 Android 发行包，Apache License 2.0）—— 全文见 https://www.apache.org/licenses/LICENSE-2.0
 
 （本文件与 THIRD-PARTY-NOTICES.md 配套：后者说明各组件的用途与项目归属，本文件汇总 MIT 组件的许可正文与版权行。）
