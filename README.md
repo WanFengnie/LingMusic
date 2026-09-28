@@ -25,8 +25,8 @@
 ### Windows 桌面端
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-home.png" width="49%" alt="资料库首页 · 现在听">
   <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-playlist.png" width="49%" alt="歌单详情">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-home.png" width="49%" alt="资料库首页 · 现在听">
 </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-player.png" width="49%" alt="播放页 · 圆角封面">
