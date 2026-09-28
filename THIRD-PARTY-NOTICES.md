@@ -4,7 +4,7 @@
 
 泠音乐（Ling Music）发行包中随附的下列独立开源组件按其原许可证分发。
 
-本声明随安装包提供。完整许可文本见 licenses/ 目录（含 SkiaSharp / HarfBuzzSharp native 包自带的第三方声明原文）。各组件版权行以随包 `.nuspec` 的 `<copyright>` 为准。
+本声明随安装包提供。完整许可文本见 licenses/ 目录（含 SkiaSharp / HarfBuzzSharp native 包与 .NET 运行时自带的第三方声明原文）。各组件版权行以随包 `.nuspec` 的 `<copyright>` 为准。
 
 ---
 
@@ -67,6 +67,7 @@ NuGet：https://www.nuget.org/packages/TagLibSharp/2.3.0
 - **Tmds.DBus.Protocol** —— D-Bus 协议实现（Tom Deseyn），https://github.com/tmds/Tmds.DBus
 - **MicroCom.Runtime** —— COM 互操作运行时（Copyright © 2021 Nikita Tsukanov），https://github.com/AvaloniaUI/Avalonia
 - **.NET 运行时与 CsWinRT 投影**（Microsoft）—— 自包含发行包内含 `System.*`、`coreclr`、`hostfxr` 等 .NET 运行时文件，以及 `WinRT.Runtime`、`Microsoft.Windows.SDK.NET`
+  - .NET 运行时自身引入的第三方库声明（ASP.NET / Slicing-by-8 等）见 [licenses/dotnet-runtime-THIRD-PARTY-NOTICES.txt](licenses/dotnet-runtime-THIRD-PARTY-NOTICES.txt)，78,041 B，随 `System.Security.Cryptography.ProtectedData 10.0.12` 包原样附带
 
 ## 5. Android 发行包另含
 
