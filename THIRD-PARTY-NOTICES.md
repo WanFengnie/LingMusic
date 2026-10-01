@@ -1,7 +1,5 @@
 # 第三方开源组件声明
 
-> 版本号唯一来源：仓库根 `LingVersion.props`（此处不再写死，避免与产物漂移）。
-
 泠音乐（Ling Music）发行包中随附的下列独立开源组件按其原许可证分发。
 
 本声明随安装包提供。完整许可文本见 licenses/ 目录（含 SkiaSharp / HarfBuzzSharp native 包与 .NET 运行时自带的第三方声明原文）。各组件版权行以随包 `.nuspec` 的 `<copyright>` 为准。
