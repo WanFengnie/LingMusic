@@ -56,7 +56,7 @@
 
 请到 [Releases](https://github.com/WanFengnie/LingMusic/releases) 下载最新发行版产物：
 - **Windows 桌面端**：下载 `LingMusic-v*.zip`，解压后双击其中的 `Ling.exe` 运行
-- **Android 移动端**：下载 `Ling.apk` 直接安装
+- **Android 移动端**：下载 `LingMusic-v*.apk` 直接安装
 
 要求：
 - Windows：Windows 10 及以上（x64）
