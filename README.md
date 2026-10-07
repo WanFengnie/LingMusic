@@ -10,7 +10,7 @@
   <img alt=".NET 10" src="https://img.shields.io/badge/.NET-10-512BD4?logo=dotnet&logoColor=white">
   <img alt="Avalonia UI" src="https://img.shields.io/badge/UI-Avalonia%2012.1.2-8b5cf6?logo=avaloniaui&logoColor=white">
   <img alt="Platform" src="https://img.shields.io/badge/Platform-Windows%20%7C%20Android-0e7a0d">
-  <img alt="Version" src="https://img.shields.io/badge/Version-1.0.0-FC3C44">
+  <img alt="Version" src="https://img.shields.io/badge/Version-1.1.0-FC3C44">
 </p>
 
 <p align="center">
