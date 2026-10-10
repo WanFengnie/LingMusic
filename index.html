@@ -165,7 +165,6 @@ figcaption{color:var(--text-dim);font-size:13px;margin-top:14px}
 .dl{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:44px auto 0;max-width:760px}
 .dl .cell{text-align:center;padding:30px 24px}
 .dl .cell h3{font-size:20px}
-.dl .btn{margin-top:20px}
 
 @media (max-width:860px){
   section{margin-top:96px}
@@ -291,17 +290,19 @@ footer .disc{opacity:.7;margin-top:8px}
 <section id="download">
   <div class="eyebrow">下载</div>
   <h2>免费，开箱即用</h2>
+  <p class="lead">两个平台的安装包都在同一个 Releases 页面，按文件后缀选择即可。</p>
   <div class="dl">
     <div class="cell">
       <h3>Windows</h3>
-      <p>Windows 10 及以上 · x64<br>下载 zip，解压后运行 Ling.exe</p>
-      <a class="btn btn-primary" href="https://github.com/WanFengnie/LingMusic/releases" rel="noopener">下载 Windows 版</a>
+      <p>Windows 10 及以上 · x64<br>选 zip 文件，解压后运行 Ling.exe</p>
     </div>
     <div class="cell">
       <h3>Android</h3>
-      <p>Android 8.0 及以上 · ARM64<br>下载 apk 直接安装</p>
-      <a class="btn btn-ghost" href="https://github.com/WanFengnie/LingMusic/releases" rel="noopener">下载 Android 版</a>
+      <p>Android 8.0 及以上 · ARM64<br>选 apk 文件，直接安装</p>
     </div>
+  </div>
+  <div class="cta">
+    <a class="btn btn-primary" href="https://github.com/WanFengnie/LingMusic/releases" rel="noopener">⬇ 前往 Releases 下载</a>
   </div>
 </section>
 </main>
