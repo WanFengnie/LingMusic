@@ -25,16 +25,16 @@
 ### Windows 桌面端
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-playlist.png" width="49%" alt="歌单详情">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-playlist-heart.png" width="49%" alt="首页">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-list-island.webp" width="49%" alt="歌曲列表 · 浮岛主题">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-list-flat.webp" width="49%" alt="歌曲列表 · 扁平化主题">
 </p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-player.png" width="49%" alt="播放页 · 圆角封面">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-player-pixel.png" width="49%" alt="播放页 · 像素封面">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-rounded.webp" width="49%" alt="播放页 · 圆角封面">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-pixel.webp" width="49%" alt="播放页 · 像素封面">
 </p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-player-vinyl.png" width="49%" alt="播放页 · 黑胶封面">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-home.png" width="49%" alt="首页">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-vinyl.webp" width="49%" alt="播放页 · 黑胶封面">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-local.webp" width="49%" alt="本地歌单">
 </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-lyric.png" width="62%" alt="桌面歌词">
@@ -44,12 +44,15 @@
 ### Android 移动端
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-android-home.png" width="24%" alt="首页推荐">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-android-player.png" width="24%" alt="播放页">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-android-lyric.png" width="24%" alt="歌词页">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-list-island.webp" width="24%" alt="歌曲列表">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-cover-a.webp" width="24%" alt="播放页">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-pixel.webp" width="24%" alt="播放页 · 像素封面">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-lyrics.webp" width="24%" alt="歌词页">
 </p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-android-landscape.png" width="66%" alt="横屏播放">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/tablet-list.webp" width="32%" alt="大屏列表">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/tablet-vinyl.webp" width="32%" alt="大屏播放页">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/tablet-flow.webp" width="32%" alt="横屏封面流">
 </p>
 
 ## 下载
