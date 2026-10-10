@@ -99,8 +99,96 @@ h1{
 .btn-ghost{color:var(--text);border-color:var(--card-border);background:var(--card)}
 .btn-ghost:hover{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.08)}
 
+.hero{
+  min-height:calc(100vh - 80px);display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+}
+main{width:100%;min-width:0;display:flex;flex-direction:column;align-items:center}
+section{width:100%;max-width:1120px;margin-top:128px}
+.eyebrow{color:var(--text-dim);font-size:12.5px;letter-spacing:6px;text-transform:uppercase}
+h2{margin-top:10px;font-size:clamp(26px,4.2vw,40px);font-weight:800;letter-spacing:1.5px;color:#fff;line-height:1.35}
+.lead{color:var(--text-dim);font-size:15px;max-width:600px;margin:14px auto 0}
+
+/* 桌面端封面样式切换 */
+.tabs{
+  display:inline-flex;gap:4px;margin-top:30px;padding:4px;border-radius:999px;
+  background:var(--card);border:1px solid var(--card-border);
+}
+.tab{
+  font:inherit;font-size:13.5px;font-weight:600;color:var(--text-dim);cursor:pointer;
+  padding:7px 18px;border-radius:999px;border:0;background:transparent;transition:.25s;
+}
+.tab:hover{color:#fff}
+.tab.on{color:#fff;background:rgba(255,255,255,.14)}
+.tab:focus-visible{outline:2px solid rgba(255,255,255,.6);outline-offset:2px}
+.stage{display:grid;margin-top:18px;align-items:center}
+.stage img{
+  grid-area:1/1;width:100%;height:auto;opacity:0;transform:scale(.985);border-radius:10px;
+  box-shadow:0 24px 80px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.1);
+  transition:opacity .5s ease,transform .5s ease;pointer-events:none;
+}
+.stage img.on{opacity:1;transform:none}
+.caption{color:var(--text-dim);font-size:13.5px;margin-top:6px;min-height:1.7em}
+
+/* 手机 */
+.phones{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px;
+}
+.phones figure,.pair figure{margin:0}
+.phones img{
+  width:100%;height:auto;display:block;border-radius:26px;
+  box-shadow:0 18px 60px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.1);
+}
+figcaption{color:var(--text-dim);font-size:13px;margin-top:14px}
+
+/* 大屏 */
+.pair{display:flex;gap:22px;margin-top:44px;align-items:flex-start}
+.pair figure:nth-child(1){flex:962}
+.pair figure:nth-child(2){flex:1180}
+.pair img{
+  width:100%;height:auto;display:block;border-radius:18px;
+  box-shadow:0 18px 60px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.1);
+}
+
+/* 功能 */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px;text-align:left}
+.cell{
+  padding:24px 24px 26px;border-radius:18px;
+  background:var(--card);border:1px solid var(--card-border);transition:.25s;
+}
+.cell:hover{border-color:rgba(255,255,255,.2);background:rgba(255,255,255,.06)}
+.cell h3{font-size:16.5px;color:#fff;font-weight:700;letter-spacing:.5px}
+.cell p{color:var(--text-dim);font-size:13.5px;margin-top:8px;line-height:1.8}
+
+/* 下载 */
+.dl{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:44px auto 0;max-width:760px}
+.dl .cell{text-align:center;padding:30px 24px}
+.dl .cell h3{font-size:20px}
+.dl .btn{margin-top:20px}
+
+@media (max-width:860px){
+  section{margin-top:96px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .phones{
+    grid-template-columns:repeat(4,62vw);overflow-x:auto;scroll-snap-type:x mandatory;
+    margin-left:-20px;margin-right:-20px;padding:0 20px 28px;scrollbar-width:none;
+  }
+  .phones::-webkit-scrollbar{display:none}
+  .phones figure{scroll-snap-align:center}
+  .pair{flex-direction:column}
+  .pair figure{flex:none !important;width:100%}
+}
+@media (max-width:560px){
+  .grid,.dl{grid-template-columns:1fr}
+  .tab{padding:7px 13px;font-size:13px}
+}
+@media (prefers-reduced-motion:reduce){
+  .logo{animation:none}
+  .stage img{transition:none}
+}
+
 footer{
-  margin-top:72px;color:var(--text-dim);font-size:12.5px;line-height:2;max-width:640px;
+  margin-top:112px;color:var(--text-dim);font-size:12.5px;line-height:2;max-width:640px;
 }
 footer a{color:var(--text-dim);text-decoration:none;border-bottom:1px dashed rgba(255,255,255,.25)}
 footer a:hover{color:#fff}
@@ -109,6 +197,7 @@ footer .disc{opacity:.7;margin-top:8px}
 </head>
 <body>
 
+<header class="hero">
 <img class="logo" src="https://github.com/user-attachments/assets/0051f112-645f-47c7-9947-252959083bc1" alt="泠音乐 Ling Music 图标">
 <h1>泠音乐</h1>
 <div class="en">Ling Music</div>
@@ -116,6 +205,7 @@ footer .disc{opacity:.7;margin-top:8px}
 
 <div class="badges">
   <span class="badge">平台 <b>Windows 10/11</b></span>
+  <span class="badge">同步提供 <b>Android 8.0+</b></span>
   <span class="badge">免费</span>
 </div>
 
@@ -123,6 +213,78 @@ footer .disc{opacity:.7;margin-top:8px}
   <a class="btn btn-primary" href="https://github.com/WanFengnie/LingMusic/releases" rel="noopener">⬇ 前往 Releases 下载</a>
   <a class="btn btn-ghost" href="https://github.com/WanFengnie/LingMusic" rel="noopener">GitHub 仓库</a>
 </div>
+</header>
+
+<main>
+<section id="showcase">
+  <div class="eyebrow">Windows 桌面端</div>
+  <h2>一张封面，一种氛围</h2>
+  <p class="lead">背景跟随封面自适应取色，流光缓缓流动。封面可以是圆角、黑胶唱片，也可以是像素。</p>
+  <div class="tabs" role="tablist" aria-label="封面样式">
+    <button class="tab on" role="tab" aria-selected="true" data-cap="圆角封面 · 歌词逐句聚焦，非当前句自动虚化">圆角封面</button>
+    <button class="tab" role="tab" aria-selected="false" data-cap="黑胶唱片 · 封面随播放转动">黑胶唱片</button>
+    <button class="tab" role="tab" aria-selected="false" data-cap="像素封面 · 逐字歌词、假名注音与翻译对照">像素封面</button>
+  </div>
+  <div class="stage">
+    <img class="on" src="img/desktop-rounded.webp" width="1600" height="1024" alt="泠音乐桌面端播放页：圆角封面与歌词">
+    <img src="img/desktop-vinyl.webp" width="1600" height="1024" loading="lazy" alt="泠音乐桌面端播放页：黑胶唱片封面">
+    <img src="img/desktop-pixel.webp" width="1600" height="1024" loading="lazy" alt="泠音乐桌面端播放页：像素封面、逐字歌词与注音翻译">
+  </div>
+  <p class="caption" id="cap">圆角封面 · 歌词逐句聚焦，非当前句自动虚化</p>
+</section>
+
+<section id="mobile">
+  <div class="eyebrow">Android 移动端</div>
+  <h2>握在手里，也是同一份安静</h2>
+  <p class="lead">每首歌都有自己的颜色：播放页的色调取自当前封面，换一首，换一种心情。</p>
+  <div class="phones">
+    <figure><img src="img/phone-cover-a.webp" width="600" height="1338" loading="lazy" alt="泠音乐手机端播放页，蓝紫色调"><figcaption>封面取色 · Hi-Res</figcaption></figure>
+    <figure><img src="img/phone-cover-b.webp" width="600" height="1338" loading="lazy" alt="泠音乐手机端播放页，青蓝色调"><figcaption>换一首，换一种色调</figcaption></figure>
+    <figure><img src="img/phone-pixel.webp" width="600" height="1338" loading="lazy" alt="泠音乐手机端播放页，像素封面与无损 FLAC"><figcaption>像素封面 · 无损 FLAC</figcaption></figure>
+    <figure><img src="img/phone-lyrics.webp" width="600" height="1338" loading="lazy" alt="泠音乐手机端歌词页"><figcaption>全屏歌词</figcaption></figure>
+  </div>
+</section>
+
+<section id="large">
+  <div class="eyebrow">平板与大屏</div>
+  <h2>屏幕变大，布局跟着舒展</h2>
+  <p class="lead">封面与歌词并排铺开；横屏时用封面流左右翻找下一首。</p>
+  <div class="pair">
+    <figure><img src="img/tablet-vinyl.webp" width="1100" height="1144" loading="lazy" alt="泠音乐平板播放页：黑胶封面与歌词并排"><figcaption>封面与歌词并排</figcaption></figure>
+    <figure><img src="img/tablet-flow.webp" width="1400" height="1186" loading="lazy" alt="泠音乐横屏播放页：封面流切歌"><figcaption>横屏 · 封面流切歌</figcaption></figure>
+  </div>
+</section>
+
+<section id="features">
+  <div class="eyebrow">功能</div>
+  <h2>把心思花在听歌这件事上</h2>
+  <div class="grid">
+    <div class="cell"><h3>本地曲库</h3><p>FLAC、WAV、AIFF、APE 无损，以及 MP3、AAC / M4A、OPUS、OGG、WMA。标题、艺人、专辑、内嵌封面与歌词可直接编辑并写回文件。</p></div>
+    <div class="cell"><h3>逐字歌词</h3><p>逐字高亮推进；日文歌词支持罗马音、平假名、片假名注音，并可开启双语翻译对照。</p></div>
+    <div class="cell"><h3>歌词随你调</h3><p>对齐、字号、字重任选；非当前句的字号、透明度、模糊分别设置；偏移按 50ms 步进微调。</p></div>
+    <div class="cell"><h3>主题与背景</h3><p>扁平化、浮岛两种主题；流光、流沙、纯色三种背景；自然流动、平缓呼吸、静态沉浸三种动态。</p></div>
+    <div class="cell"><h3>桌面歌词与迷你播放器</h3><p>Windows 端提供独立的桌面歌词窗口与迷你播放器窗口；移动端适配大屏与折叠屏悬停。</p></div>
+    <div class="cell"><h3>数据留在本机</h3><p>只读取你手动添加的文件夹，不做全盘扫描。没有遥测，没有行为追踪，没有广告。</p></div>
+  </div>
+</section>
+
+<section id="download">
+  <div class="eyebrow">下载</div>
+  <h2>免费，开箱即用</h2>
+  <div class="dl">
+    <div class="cell">
+      <h3>Windows</h3>
+      <p>Windows 10 及以上 · x64<br>下载 zip，解压后运行 Ling.exe</p>
+      <a class="btn btn-primary" href="https://github.com/WanFengnie/LingMusic/releases" rel="noopener">下载 Windows 版</a>
+    </div>
+    <div class="cell">
+      <h3>Android</h3>
+      <p>Android 8.0 及以上 · ARM64<br>下载 apk 直接安装</p>
+      <a class="btn btn-ghost" href="https://github.com/WanFengnie/LingMusic/releases" rel="noopener">下载 Android 版</a>
+    </div>
+  </div>
+</section>
+</main>
 
 <footer>
   <div>
@@ -133,8 +295,24 @@ footer .disc{opacity:.7;margin-top:8px}
   <div class="disc">
     泠音乐主体为本地音乐播放器 在线内容版权归相应平台及版权方所有 请尊重版权 支持正版
   </div>
+  <div class="disc">
+    页面截图中出现的歌曲、封面与歌词仅作界面展示之用 版权归各自权利人所有
+  </div>
   <div style="margin-top:10px">© 2026 WanFengnie · 泠音乐 Ling Music</div>
 </footer>
+
+<script>
+(function(){
+  var tabs=document.querySelectorAll('.tab'),imgs=document.querySelectorAll('.stage img'),cap=document.getElementById('cap');
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(x,j){x.classList.toggle('on',i===j);x.setAttribute('aria-selected',i===j)});
+      imgs.forEach(function(x,j){x.classList.toggle('on',i===j)});
+      cap.textContent=t.dataset.cap;
+    });
+  });
+})();
+</script>
 
 </body>
 </html>

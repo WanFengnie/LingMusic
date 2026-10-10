@@ -10,4 +10,6 @@
 !*.txt
 !*.svg
 !*.png
+!*.webp
+!img/
 !*.ico
