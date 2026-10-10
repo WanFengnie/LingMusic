@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://wanfengnie.github.io/LingMusic/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <image:image><image:loc>https://wanfengnie.github.io/LingMusic/img/desktop-rounded.webp</image:loc></image:image>
+    <image:image><image:loc>https://wanfengnie.github.io/LingMusic/img/desktop-vinyl.webp</image:loc></image:image>
+    <image:image><image:loc>https://wanfengnie.github.io/LingMusic/img/desktop-pixel.webp</image:loc></image:image>
+    <image:image><image:loc>https://wanfengnie.github.io/LingMusic/img/desktop-list-island.webp</image:loc></image:image>
+    <image:image><image:loc>https://wanfengnie.github.io/LingMusic/img/desktop-list-flat.webp</image:loc></image:image>
+    <image:image><image:loc>https://wanfengnie.github.io/LingMusic/img/desktop-local.webp</image:loc></image:image>
+    <image:image><image:loc>https://wanfengnie.github.io/LingMusic/img/phone-list-island.webp</image:loc></image:image>
+    <image:image><image:loc>https://wanfengnie.github.io/LingMusic/img/phone-list-flat.webp</image:loc></image:image>
+    <image:image><image:loc>https://wanfengnie.github.io/LingMusic/img/phone-lyrics.webp</image:loc></image:image>
+    <image:image><image:loc>https://wanfengnie.github.io/LingMusic/img/phone-cover-a.webp</image:loc></image:image>
+    <image:image><image:loc>https://wanfengnie.github.io/LingMusic/img/phone-cover-b.webp</image:loc></image:image>
+    <image:image><image:loc>https://wanfengnie.github.io/LingMusic/img/phone-pixel.webp</image:loc></image:image>
+    <image:image><image:loc>https://wanfengnie.github.io/LingMusic/img/tablet-list.webp</image:loc></image:image>
+    <image:image><image:loc>https://wanfengnie.github.io/LingMusic/img/tablet-vinyl.webp</image:loc></image:image>
+    <image:image><image:loc>https://wanfengnie.github.io/LingMusic/img/tablet-flow.webp</image:loc></image:image>
+  </url>
+</urlset>
