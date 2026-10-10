@@ -133,7 +133,7 @@ h1{
 .btn-ghost:hover{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.08)}
 
 .hero{
-  min-height:calc(100vh - 80px);display:flex;flex-direction:column;
+  min-height:calc(100vh - 80px);min-height:calc(100svh - 80px);display:flex;flex-direction:column;
   align-items:center;justify-content:center;position:relative;
 }
 .scroll-hint{
@@ -215,6 +215,7 @@ figcaption{color:var(--text-dim);font-size:13px;margin-top:14px}
   .phones{
     grid-template-columns:repeat(6,62vw);gap:22px;max-width:none;overflow-x:auto;scroll-snap-type:x mandatory;
     margin-left:-20px;margin-right:-20px;padding:0 20px 28px;scrollbar-width:none;
+    overscroll-behavior-x:contain;
   }
   .phones::-webkit-scrollbar{display:none}
   .phones figure{scroll-snap-align:center}
@@ -226,6 +227,20 @@ figcaption{color:var(--text-dim);font-size:13px;margin-top:14px}
   .phones{margin-left:-28px;margin-right:-28px;padding-left:28px;padding-right:28px}
   .grid,.dl{grid-template-columns:1fr}
   .tab{padding:7px 13px;font-size:13px}
+  section{margin-top:84px}
+  footer{margin-top:84px}
+  .slogan,h2,.lead,.caption,figcaption,.dl .cell p,footer .disc{text-wrap:balance;word-break:auto-phrase}
+  .slogan span{display:inline-block}
+  .cta{flex-direction:column;align-items:stretch;gap:12px;width:100%;max-width:280px;margin-left:auto;margin-right:auto}
+  .btn{justify-content:center}
+  .stage{margin-left:-16px;margin-right:-16px}
+  .stage img{border-radius:7px}
+  a,button{-webkit-tap-highlight-color:transparent}
+}
+@media (hover:none){
+  .btn-primary:hover{transform:none;box-shadow:0 4px 24px rgba(255,255,255,.12)}
+  .cell:hover{border-color:var(--card-border);background:var(--card)}
+  .btn:active,.tab:active{opacity:.75}
 }
 @media (prefers-reduced-motion:reduce){
   .logo,.scroll-hint svg{animation:none}
@@ -246,7 +261,7 @@ footer .disc{opacity:.7;margin-top:8px}
 <img class="logo" src="app.svg?v=2" alt="泠音乐 Ling Music 图标">
 <h1>泠音乐</h1>
 <div class="en">Ling Music</div>
-<p class="slogan">现代跨平台音乐播放器 (Windows & Android)</p>
+<p class="slogan"><span>现代跨平台音乐播放器</span> <span>(Windows & Android)</span></p>
 
 <div class="badges">
   <span class="badge">平台&nbsp;&nbsp;<b>Windows 10/11</b>&nbsp;<b>Android 8.0+</b></span>
