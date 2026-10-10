@@ -11,5 +11,6 @@
 !*.svg
 !*.png
 !*.webp
+!sitemap.xml
 !img/
 !*.ico

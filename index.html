@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>泠音乐 Ling Music — 现代跨平台音乐播放器 (Windows & Android)</title>
-<meta name="description" content="泠音乐（Ling Music）是一款现代跨平台音乐播放器 (Windows & Android)。支持本地曲库，具备自适应封面取色、动态流光背景、双语歌词动效、逐字歌词。免费下载，支持 Windows 10 及 Windows 11">
-<meta name="keywords" content="泠音乐,Ling Music,Windows音乐播放器,Android音乐播放器,本地音乐播放器,音乐,歌词,FLAC播放器,音乐播放器下载">
+<meta name="description" content="泠音乐（Ling Music）是一款现代跨平台音乐播放器 (Windows & Android)。本地曲库支持 FLAC 等无损格式，逐字歌词、日文注音与双语翻译，自适应封面取色与流光背景。免费下载，支持 Windows 10/11 与 Android 8.0+。">
+<meta name="keywords" content="泠音乐,Ling Music,Windows音乐播放器,Android音乐播放器,本地音乐播放器,无损音乐播放器,逐字歌词,音乐,歌词,FLAC播放器,音乐播放器下载">
 <meta name="author" content="WanFengnie">
-<meta name="robots" content="index,follow">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <meta name="google-site-verification" content="UYmXcX9xkuFKrh8Redz8rt_AiE0zHiDmEjh4b6gQNzs" />
 <link rel="canonical" href="https://wanfengnie.github.io/LingMusic/">
 <link rel="icon" type="image/svg+xml" href="app.svg?v=2">
@@ -19,6 +19,10 @@
 <meta property="og:title" content="泠音乐 Ling Music — 现代跨平台音乐播放器 (Windows & Android)">
 <meta property="og:description" content="自适应封面取色与动态流光歌词。Windows 10 Windows 11 Android 8.0+ 免费下载。">
 <meta property="og:image" content="https://wanfengnie.github.io/LingMusic/app.png?v=2">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:alt" content="泠音乐 Ling Music 图标">
 <meta property="og:url" content="https://wanfengnie.github.io/LingMusic/">
 <meta property="og:locale" content="zh_CN">
 
@@ -27,23 +31,51 @@
 <meta name="twitter:title" content="泠音乐 Ling Music — 现代跨平台音乐播放器 (Windows & Android)">
 <meta name="twitter:description" content="自适应封面取色与动态歌词">
 <meta name="twitter:image" content="https://wanfengnie.github.io/LingMusic/app.png?v=2">
+<meta name="twitter:image:alt" content="泠音乐 Ling Music 图标">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "泠音乐 Ling Music",
-  "alternateName": "Ling Music",
-  "operatingSystem": "Android 8.0+ Windows 10, Windows 11",
-  "applicationCategory": "MultimediaApplication",
-  "applicationSubCategory": "Music Player",
-  "inLanguage": "zh-CN",
-  "isAccessibleForFree": true,
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
-  "description": "现代跨平台音乐播放器 (Windows & Android)。本地曲库管理,自适应封面取色、动态流光背景、双语歌词动效。",
-  "url": "https://wanfengnie.github.io/LingMusic/",
-  "downloadUrl": "https://github.com/WanFengnie/LingMusic/releases",
-  "author": { "@type": "Person", "name": "WanFengnie", "url": "https://github.com/WanFengnie" }
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://wanfengnie.github.io/LingMusic/#website",
+      "name": "泠音乐 Ling Music",
+      "alternateName": ["泠音乐", "Ling Music"],
+      "url": "https://wanfengnie.github.io/LingMusic/",
+      "inLanguage": "zh-CN"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://wanfengnie.github.io/LingMusic/#app",
+      "name": "泠音乐 Ling Music",
+      "alternateName": "Ling Music",
+      "operatingSystem": "Windows 10, Windows 11, Android 8.0+",
+      "applicationCategory": "MultimediaApplication",
+      "applicationSubCategory": "Music Player",
+      "inLanguage": "zh-CN",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
+      "description": "现代跨平台音乐播放器 (Windows & Android)。本地曲库管理,自适应封面取色、动态流光背景、双语歌词动效。",
+      "featureList": [
+        "本地曲库：FLAC、WAV、AIFF、APE、MP3、AAC、OPUS、OGG、WMA",
+        "逐字歌词、日文注音与双语翻译对照",
+        "自适应封面取色与流光背景",
+        "圆角、黑胶唱片、像素三种封面样式",
+        "桌面歌词与迷你播放器窗口"
+      ],
+      "image": "https://wanfengnie.github.io/LingMusic/app.png?v=2",
+      "screenshot": [
+        "https://wanfengnie.github.io/LingMusic/img/desktop-rounded.webp",
+        "https://wanfengnie.github.io/LingMusic/img/desktop-pixel.webp",
+        "https://wanfengnie.github.io/LingMusic/img/desktop-list-island.webp",
+        "https://wanfengnie.github.io/LingMusic/img/phone-cover-a.webp"
+      ],
+      "url": "https://wanfengnie.github.io/LingMusic/",
+      "downloadUrl": "https://github.com/WanFengnie/LingMusic/releases",
+      "author": { "@type": "Person", "name": "WanFengnie", "url": "https://github.com/WanFengnie" }
+    }
+  ]
 }
 </script>
 
