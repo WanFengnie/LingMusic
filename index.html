@@ -142,6 +142,7 @@ h1{
   color:var(--text-dim);font-size:12px;letter-spacing:3px;text-decoration:none;
   transition:opacity .4s,color .25s;
 }
+.scroll-hint span{margin-right:-3px}
 .scroll-hint:hover{color:#fff}
 .scroll-hint svg{width:22px;height:22px;animation:nudge 1.8s ease-in-out infinite}
 .scroll-hint.off{opacity:0;pointer-events:none}
@@ -231,6 +232,8 @@ figcaption{color:var(--text-dim);font-size:13px;margin-top:14px}
   footer{margin-top:84px}
   .slogan,h2,.lead,.caption,figcaption,.dl .cell p,footer .disc{text-wrap:balance;word-break:auto-phrase}
   .slogan span{display:inline-block}
+  .logo{margin-top:auto}
+  .scroll-hint{position:static;transform:none;display:flex;margin-top:auto;padding-top:32px}
   .cta{flex-direction:column;align-items:stretch;gap:12px;width:100%;max-width:280px;margin-left:auto;margin-right:auto}
   .btn{justify-content:center}
   .stage{margin-left:-16px;margin-right:-16px}
