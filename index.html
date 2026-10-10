@@ -133,7 +133,7 @@ h2{margin-top:10px;font-size:clamp(26px,4.2vw,40px);font-weight:800;letter-spaci
 
 /* 手机 */
 .phones{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:40px 22px;margin:44px auto 0;max-width:840px;
 }
 .phones figure,.pair figure{margin:0}
 .phones img{
@@ -144,8 +144,8 @@ figcaption{color:var(--text-dim);font-size:13px;margin-top:14px}
 
 /* 大屏 */
 .pair{display:flex;gap:22px;margin-top:44px;align-items:flex-start}
-.pair figure:nth-child(1){flex:962}
-.pair figure:nth-child(2){flex:1180}
+.pair figure{flex:962}
+.pair figure:nth-child(3){flex:1180}
 .pair img{
   width:100%;height:auto;display:block;border-radius:18px;
   box-shadow:0 18px 60px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.1);
@@ -171,7 +171,7 @@ figcaption{color:var(--text-dim);font-size:13px;margin-top:14px}
   section{margin-top:96px}
   .grid{grid-template-columns:repeat(2,1fr)}
   .phones{
-    grid-template-columns:repeat(4,62vw);overflow-x:auto;scroll-snap-type:x mandatory;
+    grid-template-columns:repeat(6,62vw);gap:22px;max-width:none;overflow-x:auto;scroll-snap-type:x mandatory;
     margin-left:-20px;margin-right:-20px;padding:0 20px 28px;scrollbar-width:none;
   }
   .phones::-webkit-scrollbar{display:none}
@@ -230,7 +230,24 @@ footer .disc{opacity:.7;margin-top:8px}
     <img src="img/desktop-vinyl.webp" width="1600" height="1024" loading="lazy" alt="泠音乐桌面端播放页：黑胶唱片封面">
     <img src="img/desktop-pixel.webp" width="1600" height="1024" loading="lazy" alt="泠音乐桌面端播放页：像素封面、逐字歌词与注音翻译">
   </div>
-  <p class="caption" id="cap">圆角封面 · 歌词逐句聚焦，非当前句自动虚化</p>
+  <p class="caption">圆角封面 · 歌词逐句聚焦，非当前句自动虚化</p>
+</section>
+
+<section id="library">
+  <div class="eyebrow">曲库与主题</div>
+  <h2>浮岛或扁平，换一种陈列方式</h2>
+  <p class="lead">两种界面主题，同一个曲库。本地歌单集中管理你添加的歌曲与红心收藏。</p>
+  <div class="tabs" role="tablist" aria-label="界面主题">
+    <button class="tab on" role="tab" aria-selected="true" data-cap="浮岛主题 · 侧栏、搜索与播放条悬浮在背景之上">浮岛主题</button>
+    <button class="tab" role="tab" aria-selected="false" data-cap="扁平化主题 · 分栏贴边，更紧凑">扁平化主题</button>
+    <button class="tab" role="tab" aria-selected="false" data-cap="本地歌单 · 全部本地歌曲与红心收藏">本地歌单</button>
+  </div>
+  <div class="stage">
+    <img class="on" src="img/desktop-list-island.webp" width="1600" height="1024" loading="lazy" alt="泠音乐桌面端歌曲列表：浮岛主题">
+    <img src="img/desktop-list-flat.webp" width="1600" height="1024" loading="lazy" alt="泠音乐桌面端歌曲列表：扁平化主题">
+    <img src="img/desktop-local.webp" width="1600" height="1024" loading="lazy" alt="泠音乐桌面端本地歌单">
+  </div>
+  <p class="caption">浮岛主题 · 侧栏、搜索与播放条悬浮在背景之上</p>
 </section>
 
 <section id="mobile">
@@ -238,10 +255,12 @@ footer .disc{opacity:.7;margin-top:8px}
   <h2>握在手里，也是同一份安静</h2>
   <p class="lead">每首歌都有自己的颜色：播放页的色调取自当前封面，换一首，换一种心情。</p>
   <div class="phones">
+    <figure><img src="img/phone-list-island.webp" width="600" height="1338" loading="lazy" alt="泠音乐手机端歌曲列表，浮岛主题"><figcaption>列表 · 浮岛主题</figcaption></figure>
+    <figure><img src="img/phone-list-flat.webp" width="600" height="1338" loading="lazy" alt="泠音乐手机端歌曲列表，扁平化主题"><figcaption>列表 · 扁平化主题</figcaption></figure>
+    <figure><img src="img/phone-lyrics.webp" width="600" height="1338" loading="lazy" alt="泠音乐手机端歌词页"><figcaption>全屏歌词</figcaption></figure>
     <figure><img src="img/phone-cover-a.webp" width="600" height="1338" loading="lazy" alt="泠音乐手机端播放页，蓝紫色调"><figcaption>封面取色 · Hi-Res</figcaption></figure>
     <figure><img src="img/phone-cover-b.webp" width="600" height="1338" loading="lazy" alt="泠音乐手机端播放页，青蓝色调"><figcaption>换一首，换一种色调</figcaption></figure>
     <figure><img src="img/phone-pixel.webp" width="600" height="1338" loading="lazy" alt="泠音乐手机端播放页，像素封面与无损 FLAC"><figcaption>像素封面 · 无损 FLAC</figcaption></figure>
-    <figure><img src="img/phone-lyrics.webp" width="600" height="1338" loading="lazy" alt="泠音乐手机端歌词页"><figcaption>全屏歌词</figcaption></figure>
   </div>
 </section>
 
@@ -250,6 +269,7 @@ footer .disc{opacity:.7;margin-top:8px}
   <h2>屏幕变大，布局跟着舒展</h2>
   <p class="lead">封面与歌词并排铺开；横屏时用封面流左右翻找下一首。</p>
   <div class="pair">
+    <figure><img src="img/tablet-list.webp" width="1100" height="1144" loading="lazy" alt="泠音乐平板歌曲列表"><figcaption>大屏列表</figcaption></figure>
     <figure><img src="img/tablet-vinyl.webp" width="1100" height="1144" loading="lazy" alt="泠音乐平板播放页：黑胶封面与歌词并排"><figcaption>封面与歌词并排</figcaption></figure>
     <figure><img src="img/tablet-flow.webp" width="1400" height="1186" loading="lazy" alt="泠音乐横屏播放页：封面流切歌"><figcaption>横屏 · 封面流切歌</figcaption></figure>
   </div>
@@ -303,12 +323,14 @@ footer .disc{opacity:.7;margin-top:8px}
 
 <script>
 (function(){
-  var tabs=document.querySelectorAll('.tab'),imgs=document.querySelectorAll('.stage img'),cap=document.getElementById('cap');
-  tabs.forEach(function(t,i){
-    t.addEventListener('click',function(){
-      tabs.forEach(function(x,j){x.classList.toggle('on',i===j);x.setAttribute('aria-selected',i===j)});
-      imgs.forEach(function(x,j){x.classList.toggle('on',i===j)});
-      cap.textContent=t.dataset.cap;
+  document.querySelectorAll('.tabs').forEach(function(box){
+    var s=box.parentNode,tabs=box.querySelectorAll('.tab'),imgs=s.querySelectorAll('.stage img'),cap=s.querySelector('.caption');
+    tabs.forEach(function(t,i){
+      t.addEventListener('click',function(){
+        tabs.forEach(function(x,j){x.classList.toggle('on',i===j);x.setAttribute('aria-selected',i===j)});
+        imgs.forEach(function(x,j){x.classList.toggle('on',i===j)});
+        cap.textContent=t.dataset.cap;
+      });
     });
   });
 })();
