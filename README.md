@@ -74,6 +74,10 @@
 ## 功能
 
 ### 1. 本地曲库
+- 支持主流音频格式：
+  - **无损音频**：FLAC、WAV、AIFF（.aiff / .aif）、APE
+  - **常见音频**：MP3、AAC / M4A、OPUS、OGG、WMA
+  - *注：Windows 推荐 MP3 / FLAC / WAV / AIFF / AAC；Android 推荐 MP3 / FLAC / WAV / AAC / OPUS / OGG。*
 - 曲库内容来自手动添加的文件夹与文件，不扫描未指定的路径
 - 音频标签（标题、艺人、专辑、内嵌封面、内嵌歌词）可在程序内编辑，保存时写回文件
 - 封面读内嵌图；歌词读内嵌歌词，其次读同目录 `.lrc`
