@@ -134,8 +134,19 @@ h1{
 
 .hero{
   min-height:calc(100vh - 80px);display:flex;flex-direction:column;
-  align-items:center;justify-content:center;
+  align-items:center;justify-content:center;position:relative;
 }
+.scroll-hint{
+  position:absolute;left:50%;bottom:0;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  color:var(--text-dim);font-size:12px;letter-spacing:3px;text-decoration:none;
+  transition:opacity .4s,color .25s;
+}
+.scroll-hint:hover{color:#fff}
+.scroll-hint svg{width:22px;height:22px;animation:nudge 1.8s ease-in-out infinite}
+.scroll-hint.off{opacity:0;pointer-events:none}
+@keyframes nudge{0%,100%{transform:translateY(0);opacity:.55}50%{transform:translateY(7px);opacity:1}}
+@media (max-height:680px){.scroll-hint{display:none}}
 main{width:100%;min-width:0;display:flex;flex-direction:column;align-items:center}
 section{width:100%;max-width:1120px;margin-top:128px}
 .eyebrow{color:var(--text-dim);font-size:12.5px;letter-spacing:6px;text-transform:uppercase}
@@ -215,7 +226,7 @@ figcaption{color:var(--text-dim);font-size:13px;margin-top:14px}
   .tab{padding:7px 13px;font-size:13px}
 }
 @media (prefers-reduced-motion:reduce){
-  .logo{animation:none}
+  .logo,.scroll-hint svg{animation:none}
   .stage img{transition:none}
 }
 
@@ -244,6 +255,10 @@ footer .disc{opacity:.7;margin-top:8px}
   <a class="btn btn-primary" href="https://github.com/WanFengnie/LingMusic/releases" rel="noopener">⬇ 前往 Releases 下载</a>
   <a class="btn btn-ghost" href="https://github.com/WanFengnie/LingMusic" rel="noopener">GitHub 仓库</a>
 </div>
+<a class="scroll-hint" href="#showcase" aria-label="向下滚动查看界面预览">
+  <span>向下看看</span>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+</a>
 </header>
 
 <main>
@@ -357,6 +372,8 @@ footer .disc{opacity:.7;margin-top:8px}
 
 <script>
 (function(){
+  var hint=document.querySelector('.scroll-hint');
+  addEventListener('scroll',function(){hint.classList.toggle('off',scrollY>60)},{passive:true});
   document.querySelectorAll('.tabs').forEach(function(box){
     var s=box.parentNode,tabs=box.querySelectorAll('.tab'),imgs=s.querySelectorAll('.stage img'),cap=s.querySelector('.caption');
     tabs.forEach(function(t,i){
