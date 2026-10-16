@@ -67,7 +67,17 @@ NuGet：https://www.nuget.org/packages/TagLibSharp/2.3.0
 - **.NET 运行时与 CsWinRT 投影**（Microsoft）—— 自包含发行包内含 `System.*`、`coreclr`、`hostfxr` 等 .NET 运行时文件，以及 `WinRT.Runtime`、`Microsoft.Windows.SDK.NET`
   - .NET 运行时自身引入的第三方库声明（ASP.NET / Slicing-by-8 等）见 [licenses/dotnet-runtime-THIRD-PARTY-NOTICES.txt](licenses/dotnet-runtime-THIRD-PARTY-NOTICES.txt)，78,041 B，随 `System.Security.Cryptography.ProtectedData 10.0.12` 包原样附带
 
-## 5. Android 发行包另含
+## 5. mecab-ipadic 2.7.0-20070801（日语注音词典）
+
+- 项目：https://github.com/taku910/mecab/tree/master/mecab-ipadic
+- 许可证：**NAIST / ICOT 许可（允许使用、复制、修改与再分发，须附原版权声明与免责条款）**
+- 用途：本地日语注音的分词与读音数据。发行包内不含原始词典文件，而是由 `tools/build_ja_dict.py` 从其 CSV 与 `matrix.def`/`char.def`/`unk.def` 提取表层形、文脈 ID、代价与读音后生成的精简衍生数据，嵌入在 `Ling.Core.dll` 中
+- Copyright 2000, 2001, 2002, 2003 Nara Institute of Science and Technology. All Rights Reserved.
+- 全文（含 ICOT Free Software 条款与 NO WARRANTY）：[licenses/IPADIC-NAIST.txt](licenses/IPADIC-NAIST.txt)
+
+---
+
+## 6. Android 发行包另含
 
 Android 版除上述组件外，还在 APK 内捆绑下列库（各个构件以其包内附带的许可文本为准）：
 
