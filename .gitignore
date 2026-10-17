@@ -6,3 +6,5 @@
 !THIRD-PARTY-NOTICES.md
 !licenses/
 !licenses/**
+!.github/
+!.github/FUNDING.yml
