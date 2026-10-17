@@ -149,6 +149,14 @@
 
 问题与建议请开 [Issue](https://github.com/WanFengnie/LingMusic/issues)。请勿提交破解、解灰或绕过平台鉴权的内容。
 
+## 赞助
+
+如果 Ling 对你有帮助，可以通过 [爱发电](https://afdian.com/a/Wanfengnie) 请作者喝杯咖啡。
+
+- **完全自愿**：赞助与否全凭心意，没有任何义务。
+- **不影响使用**：所有功能对每个人都一样，没有付费解锁、没有会员特权，不赞助也不会有任何限制或提示打扰。
+- **衷心感谢**：每一份支持都是我继续维护和改进 Ling 的动力，谢谢你！
+
 ## 使用的开源组件
 
 程序发行包中的独立动态库按其原许可证分发，详见 [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)。
