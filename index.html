@@ -151,6 +151,7 @@ h1{
 main{width:100%;min-width:0;display:flex;flex-direction:column;align-items:center}
 section{width:100%;max-width:1120px;margin-top:128px}
 .eyebrow{color:var(--text-dim);font-size:12.5px;letter-spacing:6px;text-transform:uppercase}
+.eyebrow2{color:var(--text-dim);font-size:16px;letter-spacing:6px;text-transform:uppercase}
 h2{margin-top:10px;font-size:clamp(26px,4.2vw,40px);font-weight:800;letter-spacing:1.5px;color:#fff;line-height:1.35}
 .lead{color:var(--text-dim);font-size:15px;max-width:600px;margin:14px auto 0}
 
@@ -173,6 +174,16 @@ h2{margin-top:10px;font-size:clamp(26px,4.2vw,40px);font-weight:800;letter-spaci
   transition:opacity .5s ease,transform .5s ease;pointer-events:none;
 }
 .stage img.on{opacity:1;transform:none}
+.stage .more{
+  grid-area:1/1;aspect-ratio:1600/1119;box-sizing:border-box;border-radius:10px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:0 24px;
+  background:var(--card);border:1px solid var(--card-border);
+  opacity:0;transform:scale(.985);transition:opacity .5s ease,transform .5s ease;pointer-events:none;
+  background-image: url("img/desktop-stage-immersive-clean.webp");
+}
+.stage .more.on{opacity:1;transform:none;pointer-events:auto}
+.stage .more h3{font-size:clamp(22px,3.4vw,34px)}
+.stage .more p{color:var(--text-dim);font-size:15px}
 .caption{color:var(--text-dim);font-size:13.5px;margin-top:6px;min-height:1.7em}
 
 /* 手机 */
@@ -237,7 +248,7 @@ figcaption{color:var(--text-dim);font-size:13px;margin-top:14px}
   .cta{flex-direction:column;align-items:stretch;gap:12px;width:100%;max-width:280px;margin-left:auto;margin-right:auto}
   .btn{justify-content:center}
   .stage{margin-left:-16px;margin-right:-16px}
-  .stage img{border-radius:7px}
+  .stage img,.stage .more{border-radius:7px}
   a,button{-webkit-tap-highlight-color:transparent}
 }
 @media (hover:none){
@@ -256,9 +267,44 @@ footer{
 footer a{color:var(--text-dim);text-decoration:none;border-bottom:1px dashed rgba(255,255,255,.25)}
 footer a:hover{color:#fff}
 footer .disc{opacity:.7;margin-top:8px}
+
+/* 顶栏 */
+html{scroll-padding-top:68px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:50;height:56px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 28px;text-align:left;
+  background:rgba(14,14,16,.72);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--card-border);
+}
+.tb-brand{display:flex;align-items:center;gap:10px;color:#fff;font-size:15px;font-weight:700;letter-spacing:1px;text-decoration:none;white-space:nowrap}
+.tb-brand img{width:26px;height:26px;border-radius:7px}
+.tb-links{display:flex;align-items:center;gap:2px}
+.tb-links a{color:var(--text-dim);font-size:13.5px;text-decoration:none;padding:6px 12px;border-radius:999px;white-space:nowrap;transition:color .2s,background .2s}
+.tb-links a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.tb-links a:focus-visible{outline:2px solid rgba(255,255,255,.6);outline-offset:2px}
+.tb-links a.tb-cta{color:#0e0e10;background:#fff;font-weight:600;margin-left:8px}
+.tb-links a.tb-cta:hover{background:#fff;opacity:.88}
+@media (max-width:560px){
+  .topbar{padding:0 16px}
+  .tb-links a:not(.tb-cta){display:none}
+  .tb-links a.tb-cta{margin-left:0}
+}
 </style>
 </head>
 <body>
+<nav class="topbar" aria-label="页面导航">
+  <a class="tb-brand" href="#" aria-label="回到顶部"><img src="app.svg?v=2" alt="">泠音乐</a>
+  <div class="tb-links">
+    <a href="#showcase">界面</a>
+    <a href="#library">曲库</a>
+    <a href="#stage">歌词</a>
+    <a href="#mobile">移动端</a>
+    <a href="#features">功能</a>
+    <a href="https://github.com/WanFengnie/LingMusic" rel="noopener">GitHub</a>
+    <a class="tb-cta" href="#download">下载</a>
+  </div>
+</nav>
 
 <header class="hero">
 <img class="logo" src="app.svg?v=2" alt="泠音乐 Ling Music 图标">
@@ -283,82 +329,84 @@ footer .disc{opacity:.7;margin-top:8px}
 
 <main>
 <section id="showcase">
-  <div class="eyebrow">Windows 桌面端</div>
-  <h2>一张封面，一种氛围</h2>
-  <p class="lead">背景跟随封面自适应取色 可以是流光、流沙、也可以是静态</p>
-  <p class="lead">封面可以是圆角、黑胶唱片，也可以是像素</p>
+  <div class="eyebrow2">Windows 桌面端</div>
+  <h2>一张封面 一种氛围</h2>
+  <p class="lead">背景跟随封面自适应取色</p>
+  <p class="lead">背景样式：流光、流沙、静态 | 封面样式：圆角、黑胶唱片、像素</p>
   <div class="tabs" role="tablist" aria-label="封面样式">
-    <button class="tab on" role="tab" aria-selected="true" data-cap="圆角封面">圆角封面</button>
-    <button class="tab" role="tab" aria-selected="false" data-cap="黑胶唱片">黑胶唱片</button>
-    <button class="tab" role="tab" aria-selected="false" data-cap="像素封面">像素封面</button>
+    <button class="tab on" role="tab" aria-selected="true" data-cap="圆角封面|流沙">圆角封面</button>
+    <button class="tab" role="tab" aria-selected="false" data-cap="黑胶唱片|流光">黑胶唱片</button>
+    <button class="tab" role="tab" aria-selected="false" data-cap="像素封面|流沙">像素封面</button>
   </div>
   <div class="stage">
     <img class="on" src="img/desktop-rounded.webp" width="1600" height="1119" alt="泠音乐桌面端播放页：圆角封面与歌词">
     <img src="img/desktop-vinyl.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端播放页：黑胶唱片封面">
     <img src="img/desktop-pixel.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端播放页：像素封面、逐字歌词与注音翻译">
   </div>
-  <p class="caption">圆角封面 · 歌词逐句聚焦，非当前句自动虚化</p>
+  <p class="caption">圆角封面|流沙</p>
 </section>
 
 <section id="library">
-  <div class="eyebrow">曲库与主题</div>
-  <h2>浮岛或扁平，换一种陈列方式</h2>
-  <p class="lead">两种界面主题，同一个曲库 本地歌单集中管理你添加的歌曲与红心收藏</p>
+  <div class="eyebrow">主题</div>
+  <h2>浮岛与扁平</h2>
+  <p class="lead">两种界面主题 本地歌单可集中管理你添加的歌曲与红心收藏</p>
   <div class="tabs" role="tablist" aria-label="界面主题">
-    <button class="tab on" role="tab" aria-selected="true" data-cap="浮岛主题 · 侧栏、搜索与播放条悬浮在背景之上">浮岛主题</button>
-    <button class="tab" role="tab" aria-selected="false" data-cap="扁平化主题 · 分栏贴边，更紧凑">扁平化主题</button>
+    <button class="tab on" role="tab" aria-selected="true" data-cap="浮岛主题">浮岛主题</button>
+    <button class="tab" role="tab" aria-selected="false" data-cap="扁平化主题">扁平化主题</button>
     <button class="tab" role="tab" aria-selected="false" data-cap="本地歌单管理">本地歌单</button>
   </div>
   <div class="stage">
-    <img class="on" src="img/desktop-list-island.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端歌曲列表：浮岛主题">
+    <img class="on" src="img/desktop-home.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端歌曲列表：浮岛主题">
     <img src="img/desktop-list-flat.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端首页：扁平化主题">
     <img src="img/desktop-local.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端本地歌单">
   </div>
-  <p class="caption">浮岛主题 · 侧栏、搜索与播放条悬浮在背景之上</p>
+  <p class="caption">浮岛主题</p>
 </section>
 
 <section id="views">
-  <div class="eyebrow">首页与陈列</div>
-  <h2>首页、磁贴与海报</h2>
-  <p class="lead">在线与本地共用同一套界面 歌单可以按列表、磁贴或海报墙陈列</p>
+  <div class="eyebrow">歌单陈列</div>
+  <h2>列表、磁贴与海报</h2>
+  <p class="lead">在线本地共用同一套界面 歌单可按列表、磁贴或海报墙陈列</p>
   <div class="tabs" role="tablist" aria-label="陈列方式">
-    <button class="tab on" role="tab" aria-selected="true" data-cap="现在就听 · 每日推荐、最近播放与快速选曲">现在就听</button>
+    <button class="tab on" role="tab" aria-selected="true" data-cap="列表视图">列表</button>
     <button class="tab" role="tab" aria-selected="false" data-cap="磁贴视图">磁贴</button>
-    <button class="tab" role="tab" aria-selected="false" data-cap="海报墙 · 以封面为主的陈列方式">海报墙</button>
+    <button class="tab" role="tab" aria-selected="false" data-cap="海报视图">海报</button>
   </div>
   <div class="stage">
-    <img class="on" src="img/desktop-home.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端首页：每日推荐、最近播放与快速选曲">
-    <img src="img/desktop-tiles.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端歌单：磁贴视图">
-    <img src="img/desktop-poster.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端歌单：海报墙">
+    <img class="on" src="img/desktop-list-island.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端歌单：列表">
+    <img src="img/desktop-tiles.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端歌单：磁贴">
+    <img src="img/desktop-poster.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端歌单：海报">
   </div>
-  <p class="caption">现在就听 · 每日推荐、最近播放与快速选曲</p>
+  <p class="caption">列表</p>
 </section>
 
 <section id="stage">
-  <div class="eyebrow">歌词舞台</div>
-  <h2>只剩歌词，也是一场演出</h2>
-  <p class="lead">仅歌词模式提供多种特效 闲置时可自动沉浸，点击恢复</p>
+  <div class="eyebrow">歌词模式</div>
+  <h2>歌词也是一场演出</h2>
+  <p class="lead">歌词模式提供九种特效 闲置时可自动沉浸，点击恢复</p>
   <div class="tabs" role="tablist" aria-label="歌词特效">
-    <button class="tab on" role="tab" aria-selected="true" data-cap="霓虹 · 当前句发光，逐字推进">霓虹</button>
-    <button class="tab" role="tab" aria-selected="false" data-cap="打字机 · 逐字显现">打字机</button>
+    <button class="tab on" role="tab" aria-selected="true" data-cap="霓虹">霓虹</button>
+    <button class="tab" role="tab" aria-selected="false" data-cap="打字机">打字机</button>
     <button class="tab" role="tab" aria-selected="false" data-cap="弹跳">弹跳</button>
-    <button class="tab" role="tab" aria-selected="false" data-cap="自动沉浸 · 仅保留细进度线">自动沉浸</button>
+    <button class="tab" role="tab" aria-selected="false" data-cap="自动沉浸">自动沉浸</button>
+    <button class="tab" role="tab" aria-selected="false" data-cap="更多">更多</button>
   </div>
   <div class="stage">
     <img class="on" src="img/desktop-stage-neon.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端仅歌词模式：霓虹特效">
     <img src="img/desktop-stage-typewriter.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端仅歌词模式：打字机特效">
     <img src="img/desktop-stage-bounce.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端仅歌词模式：弹跳特效">
     <img src="img/desktop-stage-immersive.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端仅歌词模式：自动沉浸">
+    <div class="more"><h3>更多特效</h3><p>歌词模式共九种特效，下载后即可体验</p><a class="btn btn-primary" href="https://github.com/WanFengnie/LingMusic/releases" rel="noopener">⬇ 前往 Releases 下载</a></div>
   </div>
-  <p class="caption">霓虹 · 当前句发光，逐字推进</p>
+  <p class="caption">霓虹</p>
 </section>
 
 <section id="control">
   <div class="eyebrow">播放与设置</div>
-  <h2>该有的都有</h2>
+  <h2>个性化设置</h2>
   <p class="lead">播放队列、播放设置与全局设置</p>
   <div class="tabs" role="tablist" aria-label="播放与设置">
-    <button class="tab on" role="tab" aria-selected="true" data-cap="播放队列 · 可搜索、可管理">播放队列</button>
+    <button class="tab on" role="tab" aria-selected="true" data-cap="播放队列 · 可搜索、管理">播放队列</button>
     <button class="tab" role="tab" aria-selected="false" data-cap="播放设置 · 播放、声音、歌词分页">播放设置</button>
     <button class="tab" role="tab" aria-selected="false" data-cap="全局设置 · 界面风格、材质与显示">全局设置</button>
   </div>
@@ -367,11 +415,11 @@ footer .disc{opacity:.7;margin-top:8px}
     <img src="img/desktop-playsettings.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端播放设置">
     <img src="img/desktop-settings.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端设置">
   </div>
-  <p class="caption">播放队列 · 可搜索、可管理</p>
+  <p class="caption">播放队列 · 可搜索、管理</p>
 </section>
 
 <section id="mobile">
-  <div class="eyebrow">Android 移动端</div>
+  <div class="eyebrow2">Android 移动端</div>
   <h2>同样的，但随处可用</h2>
   <div class="phones">
     <figure><img src="img/phone-list-island.webp" width="600" height="1338" loading="lazy" alt="泠音乐手机端歌曲列表，浮岛主题"><figcaption>列表 · 浮岛主题</figcaption></figure>
@@ -446,7 +494,7 @@ footer .disc{opacity:.7;margin-top:8px}
   var hint=document.querySelector('.scroll-hint');
   addEventListener('scroll',function(){hint.classList.toggle('off',scrollY>60)},{passive:true});
   document.querySelectorAll('.tabs').forEach(function(box){
-    var s=box.parentNode,tabs=box.querySelectorAll('.tab'),imgs=s.querySelectorAll('.stage img'),cap=s.querySelector('.caption');
+    var s=box.parentNode,tabs=box.querySelectorAll('.tab'),imgs=s.querySelectorAll('.stage img,.stage .more'),cap=s.querySelector('.caption');
     tabs.forEach(function(t,i){
       t.addEventListener('click',function(){
         tabs.forEach(function(x,j){x.classList.toggle('on',i===j);x.setAttribute('aria-selected',i===j)});
