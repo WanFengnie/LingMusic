@@ -25,16 +25,28 @@
 ### Windows 桌面端
 
 <p align="center">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-home.webp" width="49%" alt="现在就听">
   <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-list-island.webp" width="49%" alt="歌曲列表 · 浮岛主题">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-list-flat.webp" width="49%" alt="歌曲列表 · 扁平化主题">
 </p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-list-flat.webp" width="49%" alt="首页 · 扁平化主题">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-poster.webp" width="49%" alt="歌单 · 海报墙">
+</p>
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-rounded.webp" width="49%" alt="播放页 · 圆角封面">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-pixel.webp" width="49%" alt="播放页 · 像素封面">
-</p>
-<p align="center">
   <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-vinyl.webp" width="49%" alt="播放页 · 黑胶封面">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-pixel.webp" width="49%" alt="播放页 · 像素封面">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-stage-neon.webp" width="49%" alt="歌词模式 · 霓虹特效">
+</p>
+
+<p align="center">
   <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-local.webp" width="49%" alt="本地歌单">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-playsettings.webp" width="49%" alt="播放与歌词设置">
 </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/shot-win-lyric.png" width="62%" alt="桌面歌词">
@@ -44,14 +56,21 @@
 ### Android 移动端
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-list-island.webp" width="24%" alt="歌曲列表">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-cover-a.webp" width="24%" alt="播放页">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-pixel.webp" width="24%" alt="播放页 · 像素封面">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-lyrics.webp" width="24%" alt="歌词页">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-home.webp" width="24%" alt="首页">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-local.webp" width="24%" alt="本地歌单">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-lyrics-ruby.webp" width="24%" alt="歌词页 · 日文注音">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-queue.webp" width="24%" alt="播放队列">
 </p>
+
 <p align="center">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/tablet-list.webp" width="32%" alt="大屏列表">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/tablet-vinyl.webp" width="32%" alt="大屏播放页">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-home-purple.webp" width="24%" alt="首页 · 封面取色">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-settings.webp" width="24%" alt="设置">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-lyrics.webp" width="24%" alt="全屏歌词">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/tablet-home.webp" width="32%" alt="大屏首页">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/tablet-nowplaying.webp" width="32%" alt="大屏播放页">
   <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/tablet-flow.webp" width="32%" alt="横屏封面流">
 </p>
 
