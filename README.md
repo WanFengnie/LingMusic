@@ -57,15 +57,15 @@
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-home.webp" width="24%" alt="首页">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-local.webp" width="24%" alt="本地歌单">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-lyrics-ruby.webp" width="24%" alt="歌词页 · 日文注音">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-lyrics-ruby.webp" width="24%" alt="歌词页">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-home-purple.webp" width="24%" alt="首页">
   <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-queue.webp" width="24%" alt="播放队列">
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-home-purple.webp" width="24%" alt="首页 · 封面取色">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-settings.webp" width="24%" alt="设置">
   <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-lyrics.webp" width="24%" alt="全屏歌词">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-local.webp" width="24%" alt="本地歌单">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/phone-settings.webp" width="24%" alt="设置">
 </p>
 
 <p align="center">
