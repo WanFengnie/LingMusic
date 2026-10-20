@@ -288,35 +288,76 @@ footer .disc{opacity:.7;margin-top:8px}
   <p class="lead">背景跟随封面自适应取色 可以是流光、流沙、也可以是静态</p>
   <p class="lead">封面可以是圆角、黑胶唱片，也可以是像素</p>
   <div class="tabs" role="tablist" aria-label="封面样式">
-    <button class="tab on" role="tab" aria-selected="true" data-cap="圆角封面">圆角封面</button>
+    <button class="tab on" role="tab" aria-selected="true" data-cap="圆角封面 · 逐字歌词、日文注音与翻译对照，非当前句自动虚化">圆角封面</button>
     <button class="tab" role="tab" aria-selected="false" data-cap="黑胶唱片">黑胶唱片</button>
     <button class="tab" role="tab" aria-selected="false" data-cap="像素封面">像素封面</button>
   </div>
   <div class="stage">
-    <img class="on" src="img/desktop-rounded.webp" width="1600" height="1119" alt="泠音乐桌面端播放页：圆角封面与歌词">
-    <img src="img/desktop-vinyl.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端播放页：黑胶唱片封面">
-    <img src="img/desktop-pixel.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端播放页：像素封面、逐字歌词与注音翻译">
+    <img class="on" src="img/desktop-rounded.webp" width="1600" height="1121" alt="泠音乐桌面端播放页：圆角封面、逐字歌词与日文注音">
+    <img src="img/desktop-vinyl.webp" width="1600" height="1121" loading="lazy" alt="泠音乐桌面端播放页：黑胶唱片封面">
+    <img src="img/desktop-pixel.webp" width="1600" height="1121" loading="lazy" alt="泠音乐桌面端播放页：像素封面与逐字歌词">
   </div>
-  <p class="caption">圆角封面 · 歌词逐句聚焦，非当前句自动虚化</p>
+  <p class="caption">圆角封面 · 逐字歌词、日文注音与翻译对照，非当前句自动虚化</p>
 </section>
 
 <section id="library">
   <div class="eyebrow">曲库与主题</div>
-  <h2>浮岛或扁平，换一种陈列方式</h2>
-  <p class="lead">两种界面主题，同一个曲库 本地歌单集中管理你添加的歌曲与红心收藏</p>
-  <div class="tabs" role="tablist" aria-label="界面主题">
-    <button class="tab on" role="tab" aria-selected="true" data-cap="浮岛主题 · 侧栏、搜索与播放条悬浮在背景之上">浮岛主题</button>
-    <button class="tab" role="tab" aria-selected="false" data-cap="扁平化主题 · 分栏贴边，更紧凑">扁平化主题</button>
+  <h2>首页、列表与海报，换一种陈列方式</h2>
+  <p class="lead">在线与本地共用同一套界面 支持浮岛与扁平两种界面主题</p>
+  <div class="tabs" role="tablist" aria-label="曲库视图">
+    <button class="tab on" role="tab" aria-selected="true" data-cap="现在就听 · 每日推荐、最近播放与快速选曲">现在就听</button>
+    <button class="tab" role="tab" aria-selected="false" data-cap="歌曲列表 · 浮岛主题">列表</button>
+    <button class="tab" role="tab" aria-selected="false" data-cap="磁贴视图">磁贴</button>
+    <button class="tab" role="tab" aria-selected="false" data-cap="海报墙 · 以封面为主的陈列方式">海报墙</button>
     <button class="tab" role="tab" aria-selected="false" data-cap="本地歌单管理">本地歌单</button>
   </div>
   <div class="stage">
-    <img class="on" src="img/desktop-list-island.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端歌曲列表：浮岛主题">
-    <img src="img/desktop-list-flat.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端歌曲列表：扁平化主题">
-    <img src="img/desktop-local.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端本地歌单">
+    <img class="on" src="img/desktop-home.webp" width="1600" height="1121" alt="泠音乐桌面端首页：每日推荐、最近播放与快速选曲">
+    <img src="img/desktop-list.webp" width="1600" height="1121" loading="lazy" alt="泠音乐桌面端歌曲列表：浮岛主题">
+    <img src="img/desktop-tiles.webp" width="1600" height="1121" loading="lazy" alt="泠音乐桌面端歌单：磁贴视图">
+    <img src="img/desktop-poster.webp" width="1600" height="1121" loading="lazy" alt="泠音乐桌面端歌单：海报墙">
+    <img src="img/desktop-local.webp" width="1600" height="1121" loading="lazy" alt="泠音乐桌面端本地歌单">
   </div>
-  <p class="caption">浮岛主题 · 侧栏、搜索与播放条悬浮在背景之上</p>
+  <p class="caption">现在就听 · 每日推荐、最近播放与快速选曲</p>
 </section>
 
+<section id="stage">
+  <div class="eyebrow">歌词舞台</div>
+  <h2>只剩歌词，也是一场演出</h2>
+  <p class="lead">仅歌词模式提供多种特效 闲置时可自动沉浸，点击恢复</p>
+  <div class="tabs" role="tablist" aria-label="歌词特效">
+    <button class="tab on" role="tab" aria-selected="true" data-cap="霓虹 · 当前句发光，逐字推进">霓虹</button>
+    <button class="tab" role="tab" aria-selected="false" data-cap="打字机 · 逐字显现">打字机</button>
+    <button class="tab" role="tab" aria-selected="false" data-cap="弹跳">弹跳</button>
+    <button class="tab" role="tab" aria-selected="false" data-cap="自动沉浸 · 仅保留细进度线">自动沉浸</button>
+  </div>
+  <div class="stage">
+    <img class="on" src="img/desktop-stage-neon.webp" width="1600" height="1121" alt="泠音乐桌面端仅歌词模式：霓虹特效">
+    <img src="img/desktop-stage-typewriter.webp" width="1600" height="1121" loading="lazy" alt="泠音乐桌面端仅歌词模式：打字机特效">
+    <img src="img/desktop-stage-bounce.webp" width="1600" height="1121" loading="lazy" alt="泠音乐桌面端仅歌词模式：弹跳特效">
+    <img src="img/desktop-stage-immersive.webp" width="1600" height="1121" loading="lazy" alt="泠音乐桌面端仅歌词模式：自动沉浸">
+  </div>
+  <p class="caption">霓虹 · 当前句发光，逐字推进</p>
+</section>
+
+<section id="control">
+  <div class="eyebrow">播放与设置</div>
+  <h2>该有的都有</h2>
+  <p class="lead">播放队列、播放设置与全局设置</p>
+  <div class="tabs" role="tablist" aria-label="播放与设置">
+    <button class="tab on" role="tab" aria-selected="true" data-cap="播放队列 · 可搜索、可管理">播放队列</button>
+    <button class="tab" role="tab" aria-selected="false" data-cap="播放设置 · 播放、声音、歌词分页">播放设置</button>
+    <button class="tab" role="tab" aria-selected="false" data-cap="全局设置 · 界面风格、材质与显示">全局设置</button>
+  </div>
+  <div class="stage">
+    <img class="on" src="img/desktop-queue.webp" width="1600" height="1121" alt="泠音乐桌面端播放队列">
+    <img src="img/desktop-playsettings.webp" width="1600" height="1121" loading="lazy" alt="泠音乐桌面端播放设置">
+    <img src="img/desktop-settings.webp" width="1600" height="1121" loading="lazy" alt="泠音乐桌面端设置">
+  </div>
+  <p class="caption">播放队列 · 可搜索、可管理</p>
+</section>
+
+<!-- 待换新 UI 截图后恢复：
 <section id="mobile">
   <div class="eyebrow">Android 移动端</div>
   <h2>同样的，但随处可用</h2>
@@ -340,6 +381,7 @@ footer .disc{opacity:.7;margin-top:8px}
     <figure><img src="img/tablet-flow.webp" width="1400" height="1186" loading="lazy" alt="泠音乐横屏播放页：封面流切歌"><figcaption>折叠屏悬停</figcaption></figure>
   </div>
 </section>
+-->
 
 <section id="features">
   <h2>功能</h2>
