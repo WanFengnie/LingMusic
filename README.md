@@ -180,7 +180,7 @@
 如果 Ling 对你有帮助，**可以通过 [爱发电](https://afdian.com/a/Wanfengnie) 捐赠作者，谢谢喵**<br>
 软件完全免费，但你的支持会帮助软件的维护，感谢你的支持
 
-<p align="center">
+<p align="left">
   <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/assets/afdian-%E9%95%9C%E8%8A%B1%E6%B0%B4%E6%9C%88.jpg" width="260" alt="爱发电 · 镜花水月">
 </p>
 
