@@ -25,27 +25,27 @@
 ### Windows 桌面端
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-home.webp" width="49%" alt="现在就听">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-list-island.webp" width="49%" alt="歌曲列表 · 浮岛主题">
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-list-flat.webp" width="49%" alt="首页 · 扁平化主题">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-poster.webp" width="49%" alt="歌单 · 海报墙">
-</p>
-
-<p align="center">
   <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-rounded.webp" width="49%" alt="播放页 · 圆角封面">
   <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-vinyl.webp" width="49%" alt="播放页 · 黑胶封面">
 </p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-pixel.webp" width="49%" alt="播放页 · 像素封面">
-  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-stage-neon.webp" width="49%" alt="歌词模式 · 霓虹特效">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-home.webp" width="49%" alt="现在就听">
 </p>
 
 <p align="center">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-list-flat.webp" width="49%" alt="首页 · 扁平化主题">
   <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-local.webp" width="49%" alt="本地歌单">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-list-island.webp" width="49%" alt="歌曲列表 · 浮岛主题">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-poster.webp" width="49%" alt="歌单 · 海报墙">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-stage-neon.webp" width="49%" alt="歌词模式 · 霓虹特效">
   <img src="https://raw.githubusercontent.com/WanFengnie/LingMusic/gh-pages/img/desktop-playsettings.webp" width="49%" alt="播放与歌词设置">
 </p>
 <p align="center">
