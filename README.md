@@ -4,7 +4,8 @@
 
 <h1 align="center">泠音乐</h1>
 <h4 align="center">Ling Music</h4>
-<p align="center">现代跨平台音乐播放器 (Windows &amp; Android)</p>
+<p align="center">纯原生渲染的现代跨平台音乐播放器 (Windows &amp; Android)</p>
+<p align="center">Avalonia 原生渲染 · Windows / Android 双端 · 无 WebView、无 Electron</p>
 
 <p align="center">
   <img alt=".NET 10" src="https://img.shields.io/badge/.NET-10-512BD4?logo=dotnet&logoColor=white">
