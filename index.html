@@ -245,7 +245,15 @@ figcaption{color:var(--text-dim);font-size:13px;margin-top:14px}
   body{padding-left:28px;padding-right:28px}
   .phones{margin-left:-28px;margin-right:-28px;padding-left:28px;padding-right:28px}
   .grid,.dl{grid-template-columns:1fr}
-  .tab{padding:7px 13px;font-size:13px}
+  .tabs{max-width:100%;overflow-x:auto;scrollbar-width:none;overscroll-behavior-x:contain}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{padding:7px 12px;font-size:13px;white-space:nowrap;flex:none}
+  .pair{
+    grid-template-columns:repeat(6,82vw);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;
+    margin-left:-28px;margin-right:-28px;padding:0 28px 28px;scrollbar-width:none;overscroll-behavior-x:contain;
+  }
+  .pair::-webkit-scrollbar{display:none}
+  .pair figure{scroll-snap-align:center}
   section{margin-top:84px}
   footer{margin-top:84px}
   .slogan,h2,.lead,.caption,figcaption,.dl .cell p,footer .disc{text-wrap:balance;word-break:auto-phrase}
@@ -286,16 +294,32 @@ html{scroll-padding-top:68px}
 }
 .tb-brand{display:flex;align-items:center;gap:10px;color:#fff;font-size:15px;font-weight:700;letter-spacing:1px;text-decoration:none;white-space:nowrap}
 .tb-brand img{width:26px;height:26px;border-radius:7px}
-.tb-links{display:flex;align-items:center;gap:2px}
+.tb-links,.tb-nav{display:flex;align-items:center;gap:2px}
 .tb-links a{color:var(--text-dim);font-size:13.5px;text-decoration:none;padding:6px 12px;border-radius:999px;white-space:nowrap;transition:color .2s,background .2s}
 .tb-links a:hover{color:#fff;background:rgba(255,255,255,.08)}
 .tb-links a:focus-visible{outline:2px solid rgba(255,255,255,.6);outline-offset:2px}
 .tb-links a.tb-cta{color:#0e0e10;background:#fff;font-weight:600;margin-left:8px}
 .tb-links a.tb-cta:hover{background:#fff;opacity:.88}
+.tb-menu{display:none}
 @media (max-width:560px){
   .topbar{padding:0 16px}
-  .tb-links a:not(.tb-cta){display:none}
+  .tb-links{gap:6px}
   .tb-links a.tb-cta{margin-left:0}
+  .tb-nav{
+    display:none;position:absolute;top:56px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;
+    padding:8px 12px 12px;background:rgba(14,14,16,.94);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--card-border);
+  }
+  .topbar.open .tb-nav{display:flex}
+  .tb-nav a{padding:11px 14px;font-size:15px;border-radius:10px}
+  .tb-menu{
+    display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;
+    border:0;border-radius:999px;background:transparent;color:var(--text);cursor:pointer;
+  }
+  .tb-menu svg{width:22px;height:22px}
+  .tb-menu:focus-visible{outline:2px solid rgba(255,255,255,.6);outline-offset:2px}
+  .tb-menu .x,.topbar.open .tb-menu .bars{display:none}
+  .topbar.open .tb-menu .x{display:block}
 }
 </style>
 </head>
@@ -303,6 +327,7 @@ html{scroll-padding-top:68px}
 <nav class="topbar" aria-label="页面导航">
   <a class="tb-brand" href="#" aria-label="回到顶部"><img src="app.svg?v=2" alt="">泠音乐</a>
   <div class="tb-links">
+    <div class="tb-nav" id="tb-nav">
     <a href="#showcase">播放页</a>
     <a href="#library">主题</a>
     <a href="#views">歌单</a>
@@ -312,7 +337,12 @@ html{scroll-padding-top:68px}
     <a href="#features">功能</a>
     <a href="https://github.com/WanFengnie/LingMusic" rel="noopener">GitHub</a>
     <a href="#sponsor">赞助</a>
+    </div>
     <a class="tb-cta" href="#download">下载</a>
+    <button class="tb-menu" type="button" aria-label="打开导航菜单" aria-expanded="false" aria-controls="tb-nav">
+      <svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
   </div>
 </nav>
 
@@ -518,6 +548,12 @@ html{scroll-padding-top:68px}
 (function(){
   var hint=document.querySelector('.scroll-hint');
   addEventListener('scroll',function(){hint.classList.toggle('off',scrollY>60)},{passive:true});
+  var bar=document.querySelector('.topbar'),menu=bar.querySelector('.tb-menu');
+  function setMenu(o){bar.classList.toggle('open',o);menu.setAttribute('aria-expanded',o);menu.setAttribute('aria-label',o?'关闭导航菜单':'打开导航菜单')}
+  menu.addEventListener('click',function(){setMenu(!bar.classList.contains('open'))});
+  bar.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  document.addEventListener('click',function(e){if(!bar.contains(e.target))setMenu(false)});
+  addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
   document.querySelectorAll('.tabs').forEach(function(box){
     var s=box.parentNode,tabs=box.querySelectorAll('.tab'),imgs=s.querySelectorAll('.stage img,.stage .more'),cap=s.querySelector('.caption');
     tabs.forEach(function(t,i){
