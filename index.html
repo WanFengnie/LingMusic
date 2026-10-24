@@ -101,7 +101,7 @@ body{
   font-family:"Microsoft YaHei","PingFang SC","Segoe UI",system-ui,sans-serif;
   min-height:100vh;min-height:100svh;display:flex;flex-direction:column;
   align-items:center;justify-content:flex-start;text-align:center;
-  padding:calc(var(--pad-top) + var(--safe-top)) 20px
+  padding:calc(var(--bar-h) + var(--pad-top) + var(--safe-top)) 20px
           calc(var(--pad-bot) + var(--safe-bot));line-height:1.7;
   background-image:
     radial-gradient(1000px 600px at 80% -10%, rgba(255,255,255,.045), transparent 60%),
@@ -142,7 +142,7 @@ h1{
 .btn-ghost:hover{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.08)}
 
 .hero{
-  min-height:calc(100vh - var(--pad-top) - var(--pad-bot));min-height:calc(100svh - var(--pad-top) - var(--pad-bot) - var(--safe-top) - var(--safe-bot));display:flex;flex-direction:column;
+  min-height:calc(100vh - var(--bar-h) - var(--pad-top) - var(--pad-bot));min-height:calc(100svh - var(--bar-h) - var(--pad-top) - var(--pad-bot) - var(--safe-top) - var(--safe-bot));display:flex;flex-direction:column;
   align-items:center;justify-content:center;justify-content:safe center;position:relative;
 }
 .scroll-hint{
@@ -248,6 +248,7 @@ figcaption{color:var(--text-dim);font-size:13px;margin-top:14px}
   .pair,.lands{grid-template-columns:1fr}
 }
 @media (max-width:560px){
+  :root{--pad-top:24px}
   body{padding-left:28px;padding-right:28px}
   .phones{margin-left:-28px;margin-right:-28px;padding-left:28px;padding-right:28px}
   .grid,.dl{grid-template-columns:1fr}
