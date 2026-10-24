@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>泠音乐 Ling Music — 现代跨平台音乐播放器 (Windows & Android)</title>
 <meta name="description" content="泠音乐（Ling Music）是一款基于 Avalonia 构建的跨平台播放器，在坚持纯原生渲染架构的同时，提供现代化的界面设计与交互体验 (Windows &amp; Android)。支持 FLAC 等无损本地曲库、逐字歌词、日文注音与双语翻译，歌词模式九种特效，封面自适应取色，浮岛与扁平两种主题，多种自定义样式。免费下载，支持 Windows 10/11 与 Android 8.0+。">
 <meta name="keywords" content="泠音乐,Ling Music,Windows音乐播放器,Android音乐播放器,美观,精简,自定义,特效,本地音乐播放器,无损音乐播放器,逐字歌词,日文注音,歌词特效,FLAC播放器,音乐播放器下载">
@@ -89,14 +89,20 @@
   --card-border:rgba(255,255,255,.08);
   --text:#ececef;
   --text-dim:#9a9aa2;
+  --bar-h:56px;
+  --safe-top:env(safe-area-inset-top,0px);
+  --safe-bot:env(safe-area-inset-bottom,0px);
+  --pad-top:40px;
+  --pad-bot:40px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{
   background:var(--bg);color:var(--text);
   font-family:"Microsoft YaHei","PingFang SC","Segoe UI",system-ui,sans-serif;
-  min-height:100vh;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;text-align:center;
-  padding:40px 20px;line-height:1.7;
+  min-height:100vh;min-height:100svh;display:flex;flex-direction:column;
+  align-items:center;justify-content:flex-start;text-align:center;
+  padding:calc(var(--pad-top) + var(--safe-top)) 20px
+          calc(var(--pad-bot) + var(--safe-bot));line-height:1.7;
   background-image:
     radial-gradient(1000px 600px at 80% -10%, rgba(255,255,255,.045), transparent 60%),
     radial-gradient(800px 550px at 10% 30%, rgba(255,255,255,.03), transparent 60%);
@@ -136,8 +142,8 @@ h1{
 .btn-ghost:hover{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.08)}
 
 .hero{
-  min-height:calc(100vh - 80px);min-height:calc(100svh - 80px);display:flex;flex-direction:column;
-  align-items:center;justify-content:center;position:relative;
+  min-height:calc(100vh - var(--pad-top) - var(--pad-bot));min-height:calc(100svh - var(--pad-top) - var(--pad-bot) - var(--safe-top) - var(--safe-bot));display:flex;flex-direction:column;
+  align-items:center;justify-content:center;justify-content:safe center;position:relative;
 }
 .scroll-hint{
   position:absolute;left:50%;bottom:0;transform:translateX(-50%);
@@ -284,11 +290,12 @@ footer a:hover{color:#fff}
 footer .disc{opacity:.7;margin-top:8px}
 
 /* 顶栏 */
-html{scroll-padding-top:68px}
+html{scroll-padding-top:calc(68px + var(--safe-top))}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 .topbar{
-  position:fixed;top:0;left:0;right:0;z-index:50;height:56px;
-  display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 28px;text-align:left;
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  height:calc(var(--bar-h) + var(--safe-top));padding:var(--safe-top) 28px 0;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;
   background:rgba(14,14,16,.72);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
   border-bottom:1px solid var(--card-border);
 }
@@ -302,11 +309,11 @@ html{scroll-padding-top:68px}
 .tb-links a.tb-cta:hover{background:#fff;opacity:.88}
 .tb-menu{display:none}
 @media (max-width:560px){
-  .topbar{padding:0 16px}
+  .topbar{padding:var(--safe-top) 16px 0}
   .tb-links{gap:6px}
   .tb-links a.tb-cta{margin-left:0}
   .tb-nav{
-    display:none;position:absolute;top:56px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;
+    display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;
     padding:8px 12px 12px;background:rgba(14,14,16,.94);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
     border-bottom:1px solid var(--card-border);
   }
