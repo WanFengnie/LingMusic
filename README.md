@@ -4,7 +4,8 @@
 
 <h1 align="center">泠音乐</h1>
 <h4 align="center">Ling Music</h4>
-<p align="center">纯原生渲染的现代跨平台音乐播放器 (Windows &amp; Android)</p>
+<p align="center">纯原生渲染的现代跨平台音乐播放器</p>
+<p align="center">Windows &amp; Android &amp; MacOS(beta)</p>
 <p align="center">Avalonia 原生渲染 · Windows / Android 双端 · 无 WebView、无 Electron</p>
 
 <p align="center">
@@ -76,16 +77,22 @@
 </p>
 
 ## 下载
+**目前本项目的原始发布地址只有 [**GitHub**](https://github.com/WanFengnie/LingMusic)，其他渠道均为第三方转载，与本项目无关**
 
 请到 [Releases](https://github.com/WanFengnie/LingMusic/releases) 下载最新发行版产物：
 - **Windows 桌面端**：下载 `LingMusic-v*.*.*.zip`，解压后双击其中的 `Ling.exe` 运行
 - **Android 移动端**：下载 `LingMusic-v*.*.*.apk` 直接安装
+- **MacOS 桌面端**：下载 LingMusic-v*.*.*-mac-arm64.dmg，打开后把「泠音乐」拖进「应用程序」
 
 要求：
 - Windows：Windows 10 及以上（x64）
 - Android：Android 8.0 (API 26) 及以上（ARM64）
+- macOS：macOS 14 及以上（仅支持 Apple 芯片）
 
-目前本项目的原始发布地址只有 [**GitHub**](https://github.com/WanFengnie/LingMusic)，其他渠道均为第三方转载，与本项目无关
+MacOS 安装说明:
+<br>项目未加入苹果开发者计划，应用没有经过苹果公证，首次打开会被系统拦截，任选其一放行：
+- 在「应用程序」里右键「泠音乐」→「打开」→ 再点「打开」
+- 或在终端执行：xattr -cr /Applications/Ling.app
 
 ## 安全提示
 
