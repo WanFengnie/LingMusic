@@ -6,12 +6,12 @@
 <h4 align="center">Ling Music</h4>
 <p align="center">纯原生渲染的现代跨平台音乐播放器</p>
 <p align="center">Windows &amp; Android &amp; MacOS(beta)</p>
-<p align="center">Avalonia 原生渲染 · Windows / Android 双端 · 无 WebView、无 Electron</p>
+<p align="center">Avalonia 原生渲染 · Windows / Android / macOS 多端 · 无 WebView、无 Electron</p>
 
 <p align="center">
   <img alt=".NET 10" src="https://img.shields.io/badge/.NET-10-512BD4?logo=dotnet&logoColor=white">
   <img alt="Avalonia UI" src="https://img.shields.io/badge/UI-Avalonia%2012.1.2-8b5cf6?logo=avaloniaui&logoColor=white">
-  <img alt="Platform" src="https://img.shields.io/badge/Platform-Windows%20%7C%20Android-0e7a0d">
+  <img alt="Platform" src="https://img.shields.io/badge/Platform-Windows%20%7C%20Android%20%7C%20macOS-0e7a0d">
   <img alt="Version" src="https://img.shields.io/github/v/release/WanFengnie/LingMusic?label=Version&amp;color=FC3C44">
 </p>
 
