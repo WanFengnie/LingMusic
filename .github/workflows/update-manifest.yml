@@ -1,0 +1,83 @@
+name: update-manifest
+
+# 自动维护 gh-pages 上的 latest.json（客户端的更新清单）。
+# 触发：发行「发布」/「编辑」时；每小时一次兜底（补传安装包没有事件）；手动（可选预览）。
+# 规则全部在 .github/scripts/update_manifest.py：只给发行页里已有对应安装包的平台登记新版本、
+# 版本只升不降、下载页只能是本仓库的发行页。预发布与带后缀的标签（如 v2.0.2-beta）一律跳过。
+# 该脚本是 source 分支 tools/update_manifest.py 的副本，改规则时两处同步。
+
+on:
+  release:
+    types: [published, edited]
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "版本号 M.m.p（留空 = 最新正式发行）"
+        required: false
+      dry_run:
+        description: "只预览，不写入也不推送"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-manifest
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: github.event_name != 'release' || (github.event.release.prerelease == false && github.event.release.draft == false)
+    runs-on: ubuntu-latest
+    steps:
+      - name: 取脚本（main）
+        uses: actions/checkout@v4
+
+      - name: 取 gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: ghpages
+
+      - name: 确定版本
+        id: v
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EVENT: ${{ github.event_name }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+          INPUT_VERSION: ${{ inputs.version }}
+        run: |
+          if [ "$EVENT" = "release" ]; then
+            tag="$RELEASE_TAG"
+          elif [ -n "$INPUT_VERSION" ]; then
+            tag="v$INPUT_VERSION"
+          else
+            tag="$(gh release list --repo "$GITHUB_REPOSITORY" --exclude-drafts --exclude-pre-releases --limit 1 --json tagName --jq '.[0].tagName')"
+          fi
+          ver="${tag#v}"
+          if [[ ! "$ver" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "跳过：$tag 不是 M.m.p 的正式版本号"
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "ok=true" >> "$GITHUB_OUTPUT"
+          echo "version=$ver" >> "$GITHUB_OUTPUT"
+          echo "目标版本 $ver"
+
+      - name: 更新 latest.json
+        if: steps.v.outputs.ok == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.v.outputs.version }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+        run: |
+          git -C ghpages config user.name "github-actions[bot]"
+          git -C ghpages config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ "$DRY_RUN" = "true" ]; then
+            python3 .github/scripts/update_manifest.py --version "$VERSION" --ghpages ghpages
+          else
+            python3 .github/scripts/update_manifest.py --version "$VERSION" --ghpages ghpages --apply --push
+          fi
