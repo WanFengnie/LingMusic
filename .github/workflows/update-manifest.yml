@@ -74,8 +74,8 @@ jobs:
           VERSION: ${{ steps.v.outputs.version }}
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
         run: |
-          git -C ghpages config user.name "github-actions[bot]"
-          git -C ghpages config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C ghpages config user.name "镜花水月"
+          git -C ghpages config user.email "lgl924372762@gmail.com"
           if [ "$DRY_RUN" = "true" ]; then
             python3 .github/scripts/update_manifest.py --version "$VERSION" --ghpages ghpages
           else
