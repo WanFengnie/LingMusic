@@ -8,3 +8,7 @@
 !licenses/**
 !.github/
 !.github/FUNDING.yml
+!.github/workflows/
+!.github/workflows/update-manifest.yml
+!.github/scripts/
+!.github/scripts/update_manifest.py
