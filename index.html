@@ -188,7 +188,6 @@ h2{margin-top:10px;font-size:clamp(26px,4.2vw,40px);font-weight:800;letter-spaci
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:0 24px;
   background:var(--card);border:1px solid var(--card-border);
   opacity:0;transform:scale(.985);transition:opacity .5s ease,transform .5s ease;pointer-events:none;
-  background-image: url("img/desktop-stage-immersive-clean.webp");
 }
 .stage .more.on{opacity:1;transform:none;pointer-events:auto}
 .stage .more h3{font-size:clamp(22px,3.4vw,34px)}
@@ -387,9 +386,9 @@ html{scroll-padding-top:calc(68px + var(--safe-top))}
     <button class="tab" role="tab" aria-selected="false" data-cap="像素封面|流沙">像素封面</button>
   </div>
   <div class="stage">
-    <img class="on" src="img/desktop-rounded.webp" width="1600" height="1119" alt="泠音乐桌面端播放页：圆角封面与歌词">
-    <img src="img/desktop-vinyl.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端播放页：黑胶唱片封面">
-    <img src="img/desktop-pixel.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端播放页：像素封面、逐字歌词与注音翻译">
+    <img class="on" src="img/desktop-rounded.webp" fetchpriority="high" width="1600" height="1119" alt="泠音乐桌面端播放页：圆角封面与歌词">
+    <img data-src="img/desktop-vinyl.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端播放页：黑胶唱片封面">
+    <img data-src="img/desktop-pixel.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端播放页：像素封面、逐字歌词与注音翻译">
   </div>
   <p class="caption">圆角封面|流沙</p>
 </section>
@@ -405,8 +404,8 @@ html{scroll-padding-top:calc(68px + var(--safe-top))}
   </div>
   <div class="stage">
     <img class="on" src="img/desktop-home.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端歌曲列表：浮岛主题">
-    <img src="img/desktop-list-flat.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端首页：扁平化主题">
-    <img src="img/desktop-local.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端本地歌单">
+    <img data-src="img/desktop-list-flat.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端首页：扁平化主题">
+    <img data-src="img/desktop-local.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端本地歌单">
   </div>
   <p class="caption">浮岛主题</p>
 </section>
@@ -422,8 +421,8 @@ html{scroll-padding-top:calc(68px + var(--safe-top))}
   </div>
   <div class="stage">
     <img class="on" src="img/desktop-list-island.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端歌单：列表">
-    <img src="img/desktop-tiles.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端歌单：磁贴">
-    <img src="img/desktop-poster.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端歌单：海报">
+    <img data-src="img/desktop-tiles.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端歌单：磁贴">
+    <img data-src="img/desktop-poster.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端歌单：海报">
   </div>
   <p class="caption">列表</p>
 </section>
@@ -441,10 +440,10 @@ html{scroll-padding-top:calc(68px + var(--safe-top))}
   </div>
   <div class="stage">
     <img class="on" src="img/desktop-stage-neon.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端仅歌词模式：霓虹特效">
-    <img src="img/desktop-stage-typewriter.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端仅歌词模式：打字机特效">
-    <img src="img/desktop-stage-bounce.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端仅歌词模式：弹跳特效">
-    <img src="img/desktop-stage-immersive.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端仅歌词模式：自动沉浸">
-    <div class="more"><h3>更多特效</h3><p>歌词模式共九种特效，下载后即可体验</p><a class="btn btn-primary" href="https://github.com/WanFengnie/LingMusic/releases" rel="noopener">⬇ 前往 Releases 下载</a></div>
+    <img data-src="img/desktop-stage-typewriter.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端仅歌词模式：打字机特效">
+    <img data-src="img/desktop-stage-bounce.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端仅歌词模式：弹跳特效">
+    <img data-src="img/desktop-stage-immersive.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端仅歌词模式：自动沉浸">
+    <div class="more" data-bg="img/desktop-stage-immersive-clean.webp"><h3>更多特效</h3><p>歌词模式共九种特效，下载后即可体验</p><a class="btn btn-primary" href="https://github.com/WanFengnie/LingMusic/releases" rel="noopener">⬇ 前往 Releases 下载</a></div>
   </div>
   <p class="caption">霓虹</p>
 </section>
@@ -460,8 +459,8 @@ html{scroll-padding-top:calc(68px + var(--safe-top))}
   </div>
   <div class="stage">
     <img class="on" src="img/desktop-queue.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端播放队列">
-    <img src="img/desktop-playsettings.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端播放设置">
-    <img src="img/desktop-settings.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端设置">
+    <img data-src="img/desktop-playsettings.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端播放设置">
+    <img data-src="img/desktop-settings.webp" width="1600" height="1119" loading="lazy" alt="泠音乐桌面端设置">
   </div>
   <p class="caption">播放队列 · 可搜索、管理</p>
 </section>
@@ -564,11 +563,43 @@ html{scroll-padding-top:calc(68px + var(--safe-top))}
   addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
   document.querySelectorAll('.tabs').forEach(function(box){
     var s=box.parentNode,tabs=box.querySelectorAll('.tab'),imgs=s.querySelectorAll('.stage img,.stage .more'),cap=s.querySelector('.caption');
+    var request=0;
+    function loadImage(x){
+      var src=x.dataset.src||x.dataset.bg||x.getAttribute('src');
+      if(!src)return Promise.resolve();
+      if(x._loading)return x._loading;
+      var image=x.tagName==='IMG'?x:new Image();
+      x._loading=new Promise(function(resolve,reject){
+        image.onload=function(){
+          image.onload=image.onerror=null;
+          var decoded=image.decode?image.decode().catch(function(){}):Promise.resolve();
+          decoded.then(function(){
+            if(x.dataset.bg)x.style.backgroundImage='url("'+src+'")';
+            resolve();
+          });
+        };
+        image.onerror=function(){
+          image.onload=image.onerror=null;
+          x._loading=null;
+          reject(new Error('Image failed to load'));
+        };
+        image.loading='eager';
+        image.src=src;
+      });
+      return x._loading;
+    }
     tabs.forEach(function(t,i){
       t.addEventListener('click',function(){
-        tabs.forEach(function(x,j){x.classList.toggle('on',i===j);x.setAttribute('aria-selected',i===j)});
-        imgs.forEach(function(x,j){x.classList.toggle('on',i===j)});
-        cap.textContent=t.dataset.cap;
+        var current=++request;
+        s.setAttribute('aria-busy','true');
+        loadImage(imgs[i]).then(function(){
+          if(current!==request)return;
+          tabs.forEach(function(x,j){x.classList.toggle('on',i===j);x.setAttribute('aria-selected',i===j)});
+          imgs.forEach(function(x,j){x.classList.toggle('on',i===j)});
+          cap.textContent=t.dataset.cap;
+        }).catch(function(){
+          // Keep the current image and selected tab when a request fails.
+        }).finally(function(){if(current===request)s.removeAttribute('aria-busy')});
       });
     });
   });
