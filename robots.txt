@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lingmusic.cruxs.net/sitemap.xml
