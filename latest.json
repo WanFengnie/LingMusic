@@ -2,24 +2,24 @@
   "schema": 1,
   "channels": {
     "windows-x64": {
-      "version": "2.5.0",
-      "url": "https://github.com/WanFengnie/LingMusic/releases/tag/v2.5.0"
+      "version": "2.5.1",
+      "url": "https://github.com/WanFengnie/LingMusic/releases/tag/v2.5.1"
     },
     "windows-arm64": {
-      "version": "2.5.0",
-      "url": "https://github.com/WanFengnie/LingMusic/releases/tag/v2.5.0"
+      "version": "2.5.1",
+      "url": "https://github.com/WanFengnie/LingMusic/releases/tag/v2.5.1"
     },
     "android": {
-      "version": "2.5.0",
-      "url": "https://github.com/WanFengnie/LingMusic/releases/tag/v2.5.0"
+      "version": "2.5.1",
+      "url": "https://github.com/WanFengnie/LingMusic/releases/tag/v2.5.1"
     },
     "macos-arm64": {
-      "version": "2.5.0",
-      "url": "https://github.com/WanFengnie/LingMusic/releases/tag/v2.5.0"
+      "version": "2.5.1",
+      "url": "https://github.com/WanFengnie/LingMusic/releases/tag/v2.5.1"
     },
     "ios": {
-      "version": "2.5.0",
-      "url": "https://github.com/WanFengnie/LingMusic/releases/tag/v2.5.0"
+      "version": "2.5.1",
+      "url": "https://github.com/WanFengnie/LingMusic/releases/tag/v2.5.1"
     }
   }
 }
